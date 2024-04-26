@@ -286,7 +286,7 @@ img.showcaseImage {
 }
 
 .interstitialWrapper{
-	
+	display:block;
 }
 .interstitialFlex{
 	display:flex;
