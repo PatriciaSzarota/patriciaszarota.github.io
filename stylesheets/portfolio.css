@@ -311,8 +311,8 @@ img.showcaseImage {
 }
 img.interstitialImage{
 /*	transform: skew(0deg); */
-	width:139px;
-	height:139px;
+	max-width:106px;
+	max-height:106px;
 }
 .interstitialInner{
 /*	transform: skew(-14deg); */
