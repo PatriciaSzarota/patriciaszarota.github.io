@@ -735,6 +735,8 @@ button.buttonCustom:active:after {
 	}
 	img.profile{
 		margin-left:-15%;
+		width:1000vw;
+		height:35vh;
 	}
 }
 
@@ -751,6 +753,8 @@ button.buttonCustom:active:after {
 	}
 	img.profile{
 		margin-left:-15%;
+		width:1000vw;
+		height:50vh;
 	}
 }
 
