@@ -47,14 +47,31 @@ $(window).on('scroll', function() {
 </noscript>
 
 <div class="header-navbar">
+	<div class="navbarContainer">
 		<div class="dropdown">
 		  <div class="dropdown-icon"><img src="images/navbarIcon.png"/></div>
 		  <div class="dropdown-content">
 			<div><a href="#Introductie">Introductie</a></div>
+			<div class="GRNB"><a href="#AboutMe">Wie ben ik?</a></div>
 			<div class="RED2"><a href="#Webdesign">Webdesign</a></div>
 			<div class="BLU2"><a href="#Videobewerking">Videobewerking</a></div>
 			<div><a href="#VisueelDesign">Visueel Design</a></div>
+			<div class="GRNB"><a href="#Kunst">Kunst</a></div>
 		  </div>
+		</div>
+		
+		<!-- SOCIALS -->
+		<div class="socials">
+			<div>
+				<a target="_blank" href="mailto:patriciaszarota@gmail.com"><img class="socials" style="animation: bloop-in 2s forwards;" src="images/EmailIcon.png"/></a>
+			</div>
+			<div class="flexBlankSmall"></div>
+			<div>
+				<a target="_blank" href="https://www.linkedin.com/in/patricia-szarota/"><img class="socials" style="animation: bloop-in2 3s forwards;" src="images/LinkedInIcon.png"/></a>
+			</div>
+		</div>
+		<!-- SOCIALS -->
+
 		</div>
 </div>
 
@@ -70,30 +87,69 @@ $(window).on('scroll', function() {
 		
 			<div class="heroTopWrapper-BOT">
 				<div class="heroTopContainerPROFILE">
-					<div class="heroTopName">Patricia Szarota</div>
+					<div class="heroTopName bloop-in1">Welkom!</div>
 				</div>
 				<div style="height:5vh;"></div>
 				<div class="heroTopContainer" style="margin-bottom:10vh;">
 					<div class="heroTopText justifyText">
-<h3 style="text-align:center;">Gedreven | Betrouwbaar | Vastberaden</h3>
-Van&shy;af dag één een cre&shy;a&shy;tie&shy;ve ziel, met een aan&shy;ge&shy;bo&shy;ren affi&shy;ni&shy;teit voor tech&shy;no&shy;lo&shy;gie. Mijn le&shy;ven lang ben ik ge&shy;fa&shy;sci&shy;neerd door het ver&shy;mo&shy;gen van me&shy;dia om men&shy;sen te ra&shy;ken, en heb ik me onder&shy;ge&shy;dom&shy;p&shy;eld in de we&shy;reld van di&shy;gi&shy;ta&shy;le ex&shy;pressie, waar&shy;in ik een wa&shy;re passie heb ge&shy;von&shy;den.<br>
+<h3 class="bloop-in2" style="text-align:center;"></h3>
+<div class="bloop-in3">Mijn naam is Patricia Szarota. Ik ben een kunstenaar met een passie voor de digitale wereld, en heb door de jaren leren werken met allerlij soorten creatieve applicaties om zelfs de vaagste ideeën om te zetten in opvallende visuele producten.<br>
 <br>
-Door de ja&shy;ren heen heb ik met ver&shy;schillen&shy;de soft&shy;ware&shy;pakketten ge&shy;werkt, van illu&shy;stra&shy;tie tot video&shy;be&shy;werk&shy;ing en het ont&shy;wer&shy;pen van web&shy;sites en af&shy;beel&shy;ding&shy;en. Het is een reis ge&shy;weest die mijn passie alleen maar heeft aan&shy;ge&shy;wakkerd. Nu ben ik op zoek naar kan&shy;sen om mijn ex&shy;per&shy;ti&shy;se pro&shy;fessio&shy;neel in te zet&shy;ten, om sa&shy;men te wer&shy;ken aan pro&shy;jec&shy;ten die de gren&shy;zen van cre&shy;a&shy;tie&shy;ve ex&shy;pressie ver&shy;leggen.<br>
+Ik zie het als mijn missie om mijn creativiteit te kanaliseren in zowel mijn werk als mijn privéprojecten, en daag mezelf graag uit om voortdurend nieuwe dingen te leren. Hierdoor heb ik vaardigheden opgebouwt in alles van foto- en videobewerkingssoftware tot digitale kunst en 3D-modeling programma's.<br>
 <br>
-Dit port&shy;fo&shy;lio biedt een in&shy;kijk&shy;je in mijn re&shy;cen&shy;te werk, waar&shy;in ik mijn vaar&shy;dig&shy;he&shy;den en er&shy;va&shy;ring in me&shy;di&shy;a&shy;vorm&shy;ge&shy;ving ten&shy;toon&shy;stel. Elk pro&shy;ject ver&shy;telt een ver&shy;haal, van gra&shy;fisch ont&shy;werp tot web&shy;de&shy;sign<!--, en illustreert mijn vermogen om complexe uitdagingen aan te gaan en unieke oplossingen te vinden-->. Be&shy;nieuwd naar meer? La&shy;ten we sa&shy;men de vol&shy;gende cre&shy;a&shy;tie&shy;ve reis be&shy;ginnen.<br>
+Scroll naar beneden om mij & mijn werk te leren kennen, of gebruik het menu in de linkerbovenhoek van de pagina om direct naar een bepaald hoofdstuk te gaan.<br>
+</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="heroTopWrapper-BOT profile">
-				<img class="profile" src="images/Patricia.png"/>
+				<img class="profile" id="image" src="images/Pat3D_Present-Smol.gif"/>
 			</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#image").attr("src", "images/Pat3D_Present-Smol.gif?" + Math.random());
+    });
+</script>
 
 		</div>
 
-	</div> <!-- HERO TOP END -->
-<br><br><br><br><br>
+	</div > <!-- HERO TOP END -->
+<br id="AboutMe"><br><br><br><br><br><br>
 <!-- INTERSTITIAL START -->
+
+<div class="whoAmI">
+	<div><h3 class="whoAmI">Wie ben ik?</h3></div>
+	<br><br>
+	<div class="justifyText">Mijn vrien&shy;den en colle&shy;ga’s om&shy;schrij&shy;ven mij vaak als een ge&shy;bo&shy;ren cre&shy;a&shy;tie&shy;ve&shy;ling, een ti&shy;tel die niet ver af&shy;staat van de wer&shy;ke&shy;lijk&shy;heid (al zeg ik het zelf!). Mijn vroeg&shy;ste her&shy;inner&shy;ing&shy;en zijn van het te&shy;ken&shy;en in school&shy;schrif&shy;t&shy;en en het rommel&shy;en met Mi&shy;cro&shy;soft Paint, in de hoop dat ik ooit iets zou kun&shy;nen ma&shy;ken op het ni&shy;veau van de te&shy;ken&shy;films die ik toen keek. Die cre&shy;a&shy;tie&shy;ve vonk was er sinds dag 1, en er was al&shy;tijd wel een uit&shy;laat&shy;klep voor te vin&shy;den. In de loop der tijd is het uit&shy;ge&shy;groeid tot mijn groot&shy;ste passie, en heb ik een ge&shy;zon&shy;de ver&shy;beel&shy;d&shy;ing&shy;s&shy;kracht ont&shy;wikkeld waar&shy;door ik bui&shy;ten de ge&shy;baan&shy;de pa&shy;den kan denk&shy;en en met u&shy;nie&shy;ke i&shy;deeën en con&shy;cep&shy;t&shy;en kan ko&shy;men.<br>
+	<br>
+	<b>• Veelzijdigheid en Flexibiliteit</b><br>
+<br>
+Mijn veelzijdigheid stelt me in staat om met gemak te schakelen tussen verschillende creatieve disciplines en projecten. Ik vervaardig audiovisuele presentaties even goed als ik een website in elkaar zet, teken gedetailleerde landschappen en minimalistische cartoons met gelijk gemak, en ben altijd bereid om nieuwe uitdagingen aan te gaan en deze veelzijdigheid uit te breiden.<br>
+<br>
+<b>• Doorzettingsvermogen en Leergierigheid</b><br>
+<br>
+Ik ben niet iemand die graag iets half-klaar achterlaat. Met een onwrikbaar doorzettingsvermogen laat ik geen enkel obstakel mijn vooruitgang op pauze zetten, en gebruik ik ze als kansen om te groeien en te leren. Wanneer ik een gat in mijn kennis vind richt ik mij erop om deze op te vullen, en binnen de kortste tijd heb ik een nieuw gereedschap onder de knie.<br>
+<br>
+<b>• Betrouwbaarheid en Werkethiek </b><br>
+<br>
+Betrouwbaarheid is voor mij van het grootste belang in mijn werk. Ik streef er altijd naar om resultaten te leveren die niet alleen aan de verwachtingen voldoen, maar die ook de klant volledig tevreden stellen. Mijn toewijding aan kwaliteit en mijn sterke werkethiek zorgen ervoor dat ik elk project met de hoogste standaarden benader.<br>
+<br>
+<b>• Samenwerking en Teamwork </b><br>
+<br>
+Effectieve samenwerking en teamwork zijn essentieel voor het bereiken van succes in elk project. Ik ben bedreven in het opbouwen van sterke werkrelaties met collega's en teamleden, waarbij ik open sta voor hun ideeën en input. Door actief te luisteren, constructieve feedback te geven en ondersteuning te bieden aan anderen, draag ik bij aan een positieve en productieve teamdynamiek. Mijn doel is om een omgeving te creëren waarin iedereen zich gehoord voelt en waarin we samen streven naar het beste resultaat.<br>
+	<!--Mijn creatieve reis wordt gekenmerkt door mijn veelzijdigheid en mijn vermogen om nieuwe vaardigheden snel eigen te maken. Ik ben betrouwbaar en gedisciplineerd, altijd vastbesloten om elk project tot in de puntjes te perfectioneren. Mijn doorzettingsvermogen heeft me geholpen om obstakels te overwinnen en mijn creatieve visie te realiseren.--></div>
+	<br><br>
+	<div><h2 class="whoAmI">Wat zoek ik?</h2></div>
+	<br><br>
+	<div class="justifyText">Als student streef ik ernaar om mijn theoretische kennis om te zetten in praktische ervaring en vaardigheden. Hoewel ik waardevolle inzichten heb opgedaan uit boeken en colleges, geloof ik sterk dat de echte groei plaatsvindt in de praktijk, in een professionele omgeving. Ik ben vastbesloten om deze fase van mijn leven af te sluiten met het vertrouwen dat ik mijn creatieve vaardigheden kan vergelijken met het niveau van andere succesvolle professionals in mijn vakgebied.<br>
+	<br>
+	Ik zoek naar mogelijkheden om mijzelf onder te dompelen in echte projecten en te leren van vormgevers in het veld. Ik ben op zoek naar een omgeving die me uitdaagt, me inspireert en me de ruimte geeft om te groeien en te bloeien als creatieve professional. Met een open geest en een sterke drang om te slagen, ben ik klaar om mijn talenten te laten zien en mijn passie voor kunst om te zetten in tastbare resultaten.</div>
+</div>
+
+<br><br><br>
+
 <div class="interstitialWrapper">
 	<div class="interstitialFlex">
 		<div class="interstitial">
@@ -131,7 +187,7 @@ Dit port&shy;fo&shy;lio biedt een in&shy;kijk&shy;je in mijn re&shy;cen&shy;te w
 				<div>&nbsp;</div>
 	</div>
 		<div class="showcaseTitlebarSubtitle">
-			Ik streef er&shy;naar om boei&shy;en&shy;de di&shy;gi&shy;ta&shy;le pre&shy;sen&shy;ta&shy;ties te creëren die zo&shy;wel functio&shy;neel als es&shy;the&shy;tisch aan&shy;trekke&shy;lijk zijn. Met mijn kennis van HTML, CSS en wer&shy;ken in Word&shy;Press ont&shy;wikkel ik re&shy;spon&shy;sie&shy;ve web&shy;sites die per&shy;fect wor&shy;den weer&shy;ge&shy;ge&shy;ven op alle appa&shy;ra&shy;ten, van desk&shy;top&shy;com&shy;pu&shy;ters tot smart&shy;phones, en die een naad&shy;loze ge&shy;brui&shy;kers&shy;er&shy;va&shy;ring bie&shy;den voor el&shy;ke be&shy;zoe&shy;k&shy;er. <!--Mijn doel is om het verhaal en de visie van mijn klanten te vertalen naar een online platform dat indruk maakt en hun doelgroep boeit, waardoor ze zich kunnen onderscheiden in de digitale wereld.-->
+			Ik streef er&shy;naar om boei&shy;en&shy;de di&shy;gi&shy;ta&shy;le pre&shy;sen&shy;ta&shy;ties te creëren die zo&shy;wel functio&shy;neel als es&shy;the&shy;tisch aan&shy;trekke&shy;lijk zijn. Met mijn kennis van HTML, CSS en het wer&shy;ken met Word&shy;Press ont&shy;wikkel ik re&shy;spon&shy;sie&shy;ve web&shy;sites die per&shy;fect wor&shy;den weer&shy;ge&shy;ge&shy;ven op alle appa&shy;ra&shy;ten, van desk&shy;top&shy;com&shy;pu&shy;ters tot smart&shy;phones, en die een naad&shy;loze ge&shy;brui&shy;kers&shy;er&shy;va&shy;ring bie&shy;den voor el&shy;ke be&shy;zoe&shy;k&shy;er. <!--Mijn doel is om het verhaal en de visie van mijn klanten te vertalen naar een online platform dat indruk maakt en hun doelgroep boeit, waardoor ze zich kunnen onderscheiden in de digitale wereld.-->
 		</div>
 
 			<div class="showcaseFlex elem to-fade-in">
@@ -227,6 +283,7 @@ Dit port&shy;fo&shy;lio biedt een in&shy;kijk&shy;je in mijn re&shy;cen&shy;te w
 
 	<div class="Showcase"> <!-- LOGO SHOWCASE START -->
 
+	<img class="corporateShapes" src="images/corporateShapes.png" style="width:20%;"/>
 	<img class="corporateShapes-UD" src="images/corporateShapes-UD3.png" style="width:20%;"/>
 
 			<div class="showcaseTitlebar">
@@ -266,6 +323,52 @@ Dit port&shy;fo&shy;lio biedt een in&shy;kijk&shy;je in mijn re&shy;cen&shy;te w
 			<div class="showcaseFlex elem to-fade-in">
 				<div class="showcaseImageContainer">
 					<img class="showcaseImage" src="images/PrintboysIconografie.png"/><br>
+				</div>
+			</div>
+	
+	</div> <!-- LOGO SHOWCASE END -->
+
+	<br id="Kunst"><br><br><br><br>
+
+	<div class="Showcase GRNB"> <!-- LOGO SHOWCASE START -->
+
+	<img class="corporateShapes-UD" src="images/corporateShapes-UD2.png" style="width:20%;"/>
+
+			<div class="showcaseTitlebar">
+				<div class="showcaseTitlebarHeader GRNB2">
+					Kunst
+				</div>
+				<div>&nbsp;</div>
+				<div class="showcaseTitlebarHeader2 GRNB2">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<div>&nbsp;</div>
+				<div class="showcaseTitlebarHeader2 GRNB2">&nbsp;&nbsp;</div>
+				<div>&nbsp;</div>
+	</div>
+		<div class="showcaseTitlebarSubtitle">
+			De reik&shy;wijd&shy;te van mijn di&shy;gi&shy;ta&shy;le kunst is zeer breed, va&shy;ri&shy;ë&shy;rend van kleur&shy;rij&shy;ke land&shy;schap&shy;pen tot ge&shy;de&shy;tailleer&shy;de con&shy;cept&shy;schet&shy;sen en luch&shy;ti&shy;ge car&shy;toons. Ik haal mijn in&shy;spi&shy;ra&shy;tie uit een o&shy;ver&shy;vloed aan ver&shy;schil&shy;len&shy;de ding&shy;en die mij mijn he&shy;le le&shy;ven heb&shy;ben be&shy;ïn&shy;vloed, en pro&shy;beer de trucs die ik heb ge&shy;leerd van mijn te&shy;ke&shy;n&shy;ing&shy;en te ge&shy;brui&shy;k&shy;en in mijn web- en lo&shy;go-ont&shy;werp&shy;werk.
+		</div>
+
+			<div class="showcaseFlex elem to-fade-in">
+				<div class="showcaseImageContainer">
+					<img class="showcaseImage" src="images/tablet2022.png" style="max-height:517px"/><br>
+				</div>
+				<div style="width:5%;"></div>
+				<div class="showcaseImageContainer">
+					<img class="showcaseImage" src="images/127120033745-87931b.png" style="max-height:517px"/><br>
+				</div>
+				<div style="width:5%;"></div>
+				<div class="showcaseImageContainer">
+					<img class="showcaseImage" src="images/delleweg4.png" style="max-height:517px"/><br>
+				</div>
+			</div>
+			<br>
+			<div class="showcaseFlex elem to-fade-in">
+				<div class="showcaseImageContainer">
+					<img class="showcaseImage" src="images/afterworld location concept art-aptinterior-bindless.png" style="max-height:671px;"/><br>
+				</div>
+				<div style="width:5%;"></div>
+				<div class="showcaseImageContainer">
+					<img class="showcaseImage" src="images/afterworld location concept art-apthallway.png" style="max-height:671px;"/><br>
 				</div>
 			</div>
 	
