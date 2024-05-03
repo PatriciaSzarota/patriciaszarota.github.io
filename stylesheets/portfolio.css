@@ -14,9 +14,8 @@ body{
 	display:flex;
 	justify-content:center;
 	margin-left:50%;
-	margin-right:0px;
+	margin-right:5%;
 	width:60%;
-	overflow:hidden;
 	flex-wrap:nowrap;
 	align-items:center;
 }
