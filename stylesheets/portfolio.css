@@ -455,6 +455,7 @@ img.showcaseImage {
 .showcaseTitlebarSubtitle{
 		padding: 2% 0% 0% 2%;
 		margin-bottom:3%;
+		width:50%;
 }
 
 .interstitialWrapper{
