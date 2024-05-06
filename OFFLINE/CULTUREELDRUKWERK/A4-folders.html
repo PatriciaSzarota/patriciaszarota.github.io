@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="nl" class="js background-fixed"><script async="" src="A4-folders_files/Untitled"></script><script>
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash-movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+</script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>A4 Folders – Cultureel Drukwerk</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="alternate" type="application/rss+xml" title="Cultureel Drukwerk » Feed" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlfeed/">
+<link rel="alternate" type="application/rss+xml" title="Cultureel Drukwerk » Reactiesfeed" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlcomments/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html\/wp-includes\/js\/wp-emoji-release.min.js?ver=4fd0f5bc13853fae144764d9c4a67c2c"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="A4-folders_files/style.min.css" media="all">
+<style id="wp-block-library-theme-inline-css">
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<link rel="stylesheet" id="wpzoom-social-icons-block-style-css" href="A4-folders_files/style-wpzoom-social-icons.css" media="all">
+<link rel="stylesheet" id="wpzoom-blocks-css-style-portfolio-css" href="A4-folders_files/style_002.css" media="">
+<link rel="stylesheet" id="wpzoom-blocks-css-style-portfolio_layouts-css" href="A4-folders_files/style_003.css" media="">
+<link rel="stylesheet" id="wpzoom-forms-css-frontend-formblock-css" href="A4-folders_files/style.css" media="all">
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="contact-form-7-css" href="A4-folders_files/styles.css" media="all">
+<link rel="stylesheet" id="cmplz-general-css" href="A4-folders_files/cookieblocker.min.css" media="all">
+<link rel="stylesheet" id="inspiro-google-fonts-css" href="A4-folders_files/6dd1a649f7b57f2fa3d8488c42ab9d44.css" media="all">
+<link rel="stylesheet" id="inspiro-style-css" href="A4-folders_files/style.min_002.css" media="all">
+<style id="inspiro-style-inline-css">
+body, button, input, select, textarea {
+font-family: 'Inter', sans-serif;
+font-weight: 400;
+}
+@media screen and (min-width: 782px) {
+body, button, input, select, textarea {
+font-size: 16px;
+line-height: 1.8;
+} }
+body:not(.wp-custom-logo) a.custom-logo-text {
+font-family: 'Archivo Black', sans-serif;
+font-weight: 400;
+text-transform: uppercase;
+}
+@media screen and (min-width: 782px) {
+body:not(.wp-custom-logo) a.custom-logo-text {
+font-size: 26px;
+line-height: 1;
+} }
+h1, h2, h3, h4, h5, h6, .home.blog .entry-title, .page .entry-title, .page-title, #comments>h3, #respond>h3, .entry-footer {
+font-family: 'Archivo Black', sans-serif;
+font-weight: 400;
+line-height: 1.4;
+}
+.site-title {
+font-family: 'Archivo Black', sans-serif;
+font-weight: 400;
+line-height: 1.25;
+}
+@media screen and (min-width: 782px) {
+.site-title {
+font-size: 80px;
+} }
+.site-description {
+font-family: 'Inter', sans-serif;
+line-height: 1.8;
+}
+@media screen and (min-width: 782px) {
+.site-description {
+font-size: 20px;
+} }
+.custom-header-button {
+font-family: 'Inter', sans-serif;
+line-height: 1.8;
+}
+@media screen and (min-width: 782px) {
+.custom-header-button {
+font-size: 16px;
+} }
+.navbar-nav a {
+font-family: 'Montserrat', sans-serif;
+font-weight: 500;
+line-height: 1.8;
+}
+@media screen and (min-width: 782px) {
+.navbar-nav a {
+font-size: 16px;
+} }
+@media screen and (max-width: 64em) {
+.navbar-nav li a {
+font-family: 'Montserrat', sans-serif;
+font-size: 16px;
+font-weight: 600;
+text-transform: uppercase;
+line-height: 1.8;
+} }
+
+</style>
+<link rel="stylesheet" id="wpzoom-social-icons-socicon-css" href="A4-folders_files/wpzoom-socicon.css" media="all">
+<link rel="stylesheet" id="wpzoom-social-icons-genericons-css" href="A4-folders_files/genericons.css" media="all">
+<link rel="stylesheet" id="wpzoom-social-icons-academicons-css" href="A4-folders_files/academicons.min.css" media="all">
+<link rel="stylesheet" id="wpzoom-social-icons-font-awesome-3-css" href="A4-folders_files/font-awesome-3.min.css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="A4-folders_files/dashicons.min.css" media="all">
+<link rel="stylesheet" id="wpzoom-social-icons-styles-css" href="A4-folders_files/wpzoom-social-icons-styles.css" media="all">
+<link rel="preload" as="font" id="wpzoom-social-icons-font-academicons-woff2-css" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-content/plugins/social-icons-widget-by-wpzoom/assets/font/academicons.woff2?v=1.9.2" type="font/woff2" crossorigin="">
+<link rel="preload" as="font" id="wpzoom-social-icons-font-fontawesome-3-woff2-css" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-content/plugins/social-icons-widget-by-wpzoom/assets/font/fontawesome-webfont.woff2?v=4.7.0" type="font/woff2" crossorigin="">
+<link rel="preload" as="font" id="wpzoom-social-icons-font-genericons-woff-css" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-content/plugins/social-icons-widget-by-wpzoom/assets/font/Genericons.woff" type="font/woff" crossorigin="">
+<link rel="preload" as="font" id="wpzoom-social-icons-font-socicon-woff2-css" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-content/plugins/social-icons-widget-by-wpzoom/assets/font/socicon.woff2?v=4.2.15" type="font/woff2" crossorigin="">
+<script async="" src="A4-folders_files/timeme.min.js" id="burst-timeme-js"></script>
+<script id="burst-js-extra">
+var burst = {"url":"https:\/\/https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html\/wp-json\/","page_id":"304","cookie_retention_days":"30","beacon_url":"https:\/\/https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html\/burst-statistics-endpoint.php","options":{"beacon_enabled":1,"enable_cookieless_tracking":0,"enable_turbo_mode":0,"do_not_track":0},"goals":[],"goals_script_url":"https:\/\/https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html\/wp-content\/plugins\/burst-statistics\/\/assets\/js\/build\/burst-goals.js?v=1.5.2"};
+</script>
+<script async="" src="A4-folders_files/burst.min.js" id="burst-js"></script>
+<script src="A4-folders_files/jquery.min.js" id="jquery-core-js"></script>
+<script src="A4-folders_files/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-json/"><link rel="alternate" type="application/json" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-json/wp/v2/pages/304"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlxmlrpc.php?rsd">
+<link rel="canonical" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/A4-folders.html">
+<link rel="alternate" type="application/json+oembed" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html%2Fa4-folders%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html%2Fa4-folders%2F&amp;format=xml">
+<!-- start Simple Custom CSS and JS -->
+<style>
+.inspiro-front-page.has-header-image .custom-header-media,
+.inspiro-front-page.has-header-video .custom-header-media .custom-header
+{
+height: 70vh !important;
+}
+
+.wp-block-post-title {
+display: none;
+}
+.FrontCoverGroup {
+	width:100%;
+}
+.justify {
+	text-align: justify;
+	text-justify: inter-word;
+}
+.site-title {
+	text-transform:uppercase;
+}
+
+.site-footer {
+    display: none;
+}
+.customFooter {
+	padding:2%;
+	background-color:#000;
+	color:#fff;
+	display:flex;
+	justify-content:space-evenly;
+	font-size:1rem;
+}
+.customFooterHeader{
+	margin:0px;
+	padding:0px;
+	color:#fff;
+}
+h1.site-title::after {
+	display:none;
+	height:0px;width:0px;
+	margin:0px;
+	padding:0px;
+}
+h1.site-title{
+	margin:0px;
+	padding:0px;
+}
+.inspiro-front-page .custom-logo {
+	display:none;
+}</style>
+<!-- end Simple Custom CSS and JS -->
+<style>.cmplz-hidden{display:none!important;}</style>		<style id="inspiro-custom-header-styles" type="text/css">
+					.site-title a,
+			.colors-dark .site-title a,
+			.colors-custom .site-title a,
+			body.has-header-image .site-title a,
+			body.has-header-video .site-title a,
+			body.has-header-image.colors-dark .site-title a,
+			body.has-header-video.colors-dark .site-title a,
+			body.has-header-image.colors-custom .site-title a,
+			body.has-header-video.colors-custom .site-title a,
+			.site-description,
+			.colors-dark .site-description,
+			.colors-custom .site-description,
+			body.has-header-image .site-description,
+			body.has-header-video .site-description,
+			body.has-header-image.colors-dark .site-description,
+			body.has-header-video.colors-dark .site-description,
+			body.has-header-image.colors-custom .site-description,
+			body.has-header-video.colors-custom .site-description {
+				color: ;
+			}
+		
+					.custom-header-button {
+				color: #ffffff;
+				border-color: #ffffff;
+			}
+		
+					.custom-header-button:hover {
+				color: #ffffff;
+			}
+		
+		
+        
+        
+        
+		            .headroom--not-top .navbar,
+			.has-header-image.home.blog .headroom--not-top .navbar, 
+			.has-header-image.inspiro-front-page .headroom--not-top .navbar, 
+			.has-header-video.home.blog .headroom--not-top .navbar, 
+			.has-header-video.inspiro-front-page .headroom--not-top .navbar {
+				background-color: rgba(0,0,0,0.9);
+			}
+				</style>
+		<link rel="icon" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-content/uploads/2023/11/cropped-CultureelDrukwerkLogo-onontworpen-standalone-32x32.png" sizes="32x32">
+<link rel="icon" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-content/uploads/2023/11/cropped-CultureelDrukwerkLogo-onontworpen-standalone-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-content/uploads/2023/11/cropped-CultureelDrukwerkLogo-onontworpen-standalone-180x180.png">
+<meta name="msapplication-TileImage" content="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-content/uploads/2023/11/cropped-CultureelDrukwerkLogo-onontworpen-standalone-270x270.png">
+<link rel="icon" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-content/uploads/2023/10/CultureelDrukwerkLogo-Versie1-300x300.png" sizes="32x32">
+<link href="A4-folders_files/banner-1-optin.css" type="text/css" rel="stylesheet"><script src="A4-folders_files/wp-emoji-release.min.js" defer="defer"></script></head>
+
+<body data-rsssl="1" data-cmplz="1" class="page-template-default page page-id-304 wp-custom-logo wp-embed-responsive post-display-content-excerpt colors-light inspiro-page-ready inspiro-page-loaded cmplz-functional cmplz-eu cmplz-optin"><div id="cmplz-cookiebanner-container"><div class="cmplz-cookiebanner banner-1 optin cmplz-bottom-right cmplz-categories-type-view-preferences cmplz-show" aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite" aria-labelledby="cmplz-header-1-optin" aria-describedby="cmplz-message-1-optin">
+	<div class="cmplz-header">
+		<div class="cmplz-logo"></div>
+		<div class="cmplz-title" id="cmplz-header-1-optin">Manage Cookie Consent</div>
+		<div class="cmplz-close" tabindex="0" role="button" aria-label="close-dialog">
+			<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+		</div>
+	</div>
+
+	<div class="cmplz-divider cmplz-divider-header"></div>
+	<div class="cmplz-body">
+		<div class="cmplz-message" id="cmplz-message-1-optin">To provide the 
+best experiences, we use technologies like cookies to store and/or 
+access device information. Consenting to these technologies will allow 
+us to process data such as browsing behavior or unique IDs on this site.
+ Not consenting or withdrawing consent, may adversely affect certain 
+features and functions.</div>
+		<!-- categories start -->
+		<div class="cmplz-categories">
+			<details class="cmplz-category cmplz-functional">
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Functional</span>
+							<span class="cmplz-always-active">
+								<span class="cmplz-banner-checkbox">
+									<input type="checkbox" id="cmplz-functional-optin" data-category="cmplz_functional" class="cmplz-consent-checkbox cmplz-functional" size="40" value="1" checked="checked">
+									<label class="cmplz-label" for="cmplz-functional-optin" tabindex="0"><span class="screen-reader-text">Functional</span></label>
+								</span>
+								Altijd actief							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-functional">The technical storage or
+ access is strictly necessary for the legitimate purpose of enabling the
+ use of a specific service explicitly requested by the subscriber or 
+user, or for the sole purpose of carrying out the transmission of a 
+communication over an electronic communications network.</span>
+				</div>
+			</details>
+
+			<details class="cmplz-category cmplz-preferences">
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Voorkeuren</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox" id="cmplz-preferences-optin" data-category="cmplz_preferences" class="cmplz-consent-checkbox cmplz-preferences" size="40" value="1">
+								<label class="cmplz-label" for="cmplz-preferences-optin" tabindex="0"><span class="screen-reader-text">Voorkeuren</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-preferences">De technische opslag of
+ toegang is noodzakelijk voor het legitieme doel voorkeuren op te slaan 
+die niet door de abonnee of gebruiker zijn aangevraagd.</span>
+				</div>
+			</details>
+
+			<details class="cmplz-category cmplz-statistics">
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Statistics</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox" id="cmplz-statistics-optin" data-category="cmplz_statistics" class="cmplz-consent-checkbox cmplz-statistics" size="40" value="1">
+								<label class="cmplz-label" for="cmplz-statistics-optin" tabindex="0"><span class="screen-reader-text">Statistics</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-statistics">De technische opslag of toegang die uitsluitend voor statistische doeleinden wordt gebruikt.</span>
+					<span class="cmplz-description-statistics-anonymous">The technical 
+storage or access that is used exclusively for anonymous statistical 
+purposes. Without a subpoena, voluntary compliance on the part of your 
+Internet Service Provider, or additional records from a third party, 
+information stored or retrieved for this purpose alone cannot usually be
+ used to identify you.</span>
+				</div>
+			</details>
+			<details class="cmplz-category cmplz-marketing">
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Marketing</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox" id="cmplz-marketing-optin" data-category="cmplz_marketing" class="cmplz-consent-checkbox cmplz-marketing" size="40" value="1">
+								<label class="cmplz-label" for="cmplz-marketing-optin" tabindex="0"><span class="screen-reader-text">Marketing</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-marketing">The technical storage or 
+access is required to create user profiles to send advertising, or to 
+track the user on a website or across several websites for similar 
+marketing purposes.</span>
+				</div>
+			</details>
+		</div><!-- categories end -->
+			</div>
+
+	<div class="cmplz-links cmplz-information">
+		<a class="cmplz-link cmplz-manage-options cookie-statement" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/cookie-policy-eu.html#cmplz-manage-consent-container" data-relative_url="#cmplz-manage-consent-container">Beheer opties</a>
+		<a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/cookie-policy-eu.html#cmplz-cookies-overview" data-relative_url="#cmplz-cookies-overview">Beheer diensten</a>
+		<a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/cookie-policy-eu.html#cmplz-tcf-wrapper" data-relative_url="#cmplz-tcf-wrapper">Beheer {vendor_count} leveranciers</a>
+		<a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/">Lees meer over deze doeleinden</a>
+			</div>
+
+	<div class="cmplz-divider cmplz-footer"></div>
+
+	<div class="cmplz-buttons">
+		<button class="cmplz-btn cmplz-accept">Accept</button>
+		<button class="cmplz-btn cmplz-deny">Deny</button>
+		<button class="cmplz-btn cmplz-view-preferences">View preferences</button>
+		<button class="cmplz-btn cmplz-save-preferences">Save preferences</button>
+		<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/cookie-policy-eu.html#cmplz-manage-consent-container" data-relative_url="#cmplz-manage-consent-container">View preferences</a>
+			</div>
+
+	<div class="cmplz-links cmplz-documents">
+		<a class="cmplz-link cookie-statement" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/cookie-policy-eu.html" data-relative_url="">Cookiebeleid</a>
+		<a class="cmplz-link privacy-statement" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/privacybeleid.html" data-relative_url="">Privacybeleid</a>
+		<a class="cmplz-link impressum cmplz-hidden" href="#" data-relative_url="">{title}</a>
+			</div>
+
+</div>
+</div>
+
+<aside id="side-nav" class="side-nav" tabindex="-1">
+	<div class="side-nav__scrollable-container">
+		<div class="side-nav__wrap">
+			<div class="side-nav__close-button">
+				<button type="button" class="navbar-toggle">
+					<span class="screen-reader-text">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+							<nav class="mobile-menu-wrapper" aria-label="Mobile Menu" role="navigation">
+					<ul id="menu-menu" class="nav navbar-nav"><li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-66"><a href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html">Over Ons</a></li>
+<li id="menu-item-152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"><a href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/prijzen.html">Prijzen</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/contact.html">Contact</a></li>
+<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-67"><a rel="privacy-policy" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/privacybeleid.html">Privacybeleid</a></li>
+<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/cookie-policy-eu.html">Cookiebeleid</a></li>
+</ul>				</nav>
+								</div>
+	</div>
+</aside>
+<div class="side-nav-overlay"></div>
+
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header headroom headroom--top headroom--not-bottom" role="banner">
+		<div id="site-navigation" class="navbar">
+	<div class="header-inner inner-wrap  wpz_menu_normal">
+
+		<div class="header-logo-wrapper">
+			<a href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html" class="custom-logo-link" rel="home"><img width="880" height="880" src="A4-folders_files/CultureelDrukwerkLogo-onontworpen-wit.png" class="custom-logo" alt="Cultureel Drukwerk" decoding="async" fetchpriority="high" srcset="A4-folders_files/CultureelDrukwerkLogo-onontworpen-wit.png 880w, A4-folders_files/CultureelDrukwerkLogo-onontworpen-wit-300x300.png 300w, A4-folders_files/CultureelDrukwerkLogo-onontworpen-wit-150x150.png 150w, A4-folders_files/CultureelDrukwerkLogo-onontworpen-wit-768x768.png 768w, A4-folders_files/CultureelDrukwerkLogo-onontworpen-wit-600x600.png 600w, A4-folders_files/CultureelDrukwerkLogo-onontworpen-wit-800x800.png 800w" sizes="100vw"></a>		</div>
+		
+					<div class="header-navigation-wrapper">
+				<nav class="primary-menu-wrapper navbar-collapse collapse" aria-label="Top Horizontal Menu" role="navigation">
+					<ul id="menu-menu-1" class="nav navbar-nav dropdown sf-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-66"><a href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html">Over Ons</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"><a href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/prijzen.html">Prijzen</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/contact.html">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-67"><a rel="privacy-policy" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/privacybeleid.html">Privacybeleid</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/cookie-policy-eu.html">Cookiebeleid</a></li>
+</ul>				</nav>
+			</div>
+				
+		<div class="header-widgets-wrapper">
+			
+			<div id="sb-search" class="sb-search" style="display: none;">
+				
+<form method="get" id="searchform" action="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html">
+	<label for="search-form-input">
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="sb-search-input" placeholder="Type your keywords and hit Enter..." name="s" id="search-form-input" autocomplete="off">
+	</label>
+	<button class="sb-search-button-open" aria-expanded="false">
+		<span class="sb-icon-search">
+			<svg class="svg-icon svg-icon-search" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path d="M38.710696,48.0601792 L43,52.3494831 L41.3494831,54 L37.0601792,49.710696 C35.2632422,51.1481185 32.9839107,52.0076499 30.5038249,52.0076499 C24.7027226,52.0076499 20,47.3049272 20,41.5038249 C20,35.7027226 24.7027226,31 30.5038249,31 C36.3049272,31 41.0076499,35.7027226 41.0076499,41.5038249 C41.0076499,43.9839107 40.1481185,46.2632422 38.710696,48.0601792 Z M36.3875844,47.1716785 C37.8030221,45.7026647 38.6734666,43.7048964 38.6734666,41.5038249 C38.6734666,36.9918565 35.0157934,33.3341833 30.5038249,33.3341833 C25.9918565,33.3341833 22.3341833,36.9918565 22.3341833,41.5038249 C22.3341833,46.0157934 25.9918565,49.6734666 30.5038249,49.6734666 C32.7048964,49.6734666 34.7026647,48.8030221 36.1716785,47.3875844 C36.2023931,47.347638 36.2360451,47.3092237 36.2726343,47.2726343 C36.3092237,47.2360451 36.347638,47.2023931 36.3875844,47.1716785 Z" transform="translate(-20 -31)"></path></svg>		</span>
+	</button>
+	<button class="sb-search-button-close" aria-expanded="false">
+		<span class="sb-icon-search">
+			<svg class="svg-icon svg-icon-cross" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon fill="" fill-rule="evenodd" points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102"></polygon></svg>		</span>
+	</button>
+</form>
+			</div>
+
+							<button type="button" class="navbar-toggle">
+					<span class="screen-reader-text">Toggle sidebar &amp; navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+					</div>
+	</div><!-- .inner-wrap -->
+</div><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+    
+	
+	<div class="site-content-contain">
+		<div id="content" class="site-content" style="padding-top: 124.4px;">
+
+
+<div class="inner-wrap">
+	<div id="primary" class="content-area">
+
+
+		<main id="main" class="site-main" role="main">
+
+			
+<article id="post-304" class="post-304 page type-page status-publish hentry">
+
+	
+	<header class="entry-header">
+
+		<div class="inner-wrap"><h1 class="entry-title">A4 Folders</h1></div><!-- .inner-wrap -->
+	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		<div class="wp-block-image is-style-default">
+<figure class="aligncenter size-full"><img decoding="async" style="border:2px solid black;width:50%;height:50%;margin-left:25%;margin-top:0px;" src="A4-folders_files/Folder-2-A4.png" alt="" class="wp-image-228"></figure></div>
+
+
+<figure class="wp-block-table is-style-regular"><table><tbody><tr>
+<td style="background-color:#000000;color:#FFFFFF;"> </td>
+<td style="background-color:#000000;color:#FFFFFF;">135 gr.</td>
+<td style="background-color:#000000;color:#FFFFFF;">170 gr.</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">250 Folders</td>
+<td>€ 49,-</td>
+<td>€ 59,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">1.000 Folders</td>
+<td>€ 65,-</td>
+<td>€ 73,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">2.500 Folders</td>
+<td>€ 92,-</td>
+<td>€ 118,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">5.000 Folders</td>
+<td>€ 150,-</td>
+<td>€ 195,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">10.000 Folders</td>
+<td>€ 260,-</td>
+<td>€ 330,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">15.000 Folders</td>
+<td>€ 378,-</td>
+<td>€ 481,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">20.000 Folders</td>
+<td>€ 490,-</td>
+<td>€ 633,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">25.000 Folders</td>
+<td>€ 603,-</td>
+<td>€ 782,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">30.000 Folders</td>
+<td>€ 707,-</td>
+<td>€ 934,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">35.000 Folders</td>
+<td>€ 810,-</td>
+<td>€ 1085,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">40.000 Folders</td>
+<td>€ 915,-</td>
+<td>€ 1237,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">50.000 Folders</td>
+<td>€ 1125,-</td>
+<td>€ 1467,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">60.000 Folders</td>
+<td>€ 1334,-</td>
+<td>€ 1699,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">70.000 Folders</td>
+<td>€ 1539,-</td>
+<td>€ 1939,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">80.000 Folders</td>
+<td>€ 1745,-</td>
+<td>€ 2196,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">90.000 Folders</td>
+<td>€ 1952,-</td>
+<td>€ 2457,-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">100.000 Folders</td>
+<td>€ 2159,-</td>
+<td>€ 2789,-</td>
+</tr>
+</tbody></table></figure>
+
+
+
+<figure class="wp-block-table is-style-regular"><table><tbody><tr>
+<td colspan="2" style="background-color:#000000;color:#FFFFFF;padding-left:1%;">Productinformatie</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">Formaat:</td>
+<td>A3 gevouwen naar A4, gesloten formaat 210 x 297 mm</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">Materiaal:</td>
+<td>Glanzend papier-</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">Gewicht:</td>
+<td>135, 170 of 250 gram</td>
+</tr>
+<tr>
+<td style="padding-left:1%;">Bedrukking:</td>
+<td>full color 4/4 bedrukking</td>
+</tr>
+</tbody></table></figure>
+	</div><!-- .entry-content -->
+</article><!-- #post-304 -->
+
+		</main><!-- #main -->
+
+
+	</div><!-- #primary -->
+</div><!-- .inner-wrap -->
+
+
+
+		</div><!-- #content -->
+
+		
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="inner-wrap">
+				
+<div class="site-info">
+	<a class="privacy-policy-link" href="https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/privacybeleid.html" rel="privacy-policy">Privacybeleid</a><span role="separator" aria-hidden="true"></span>	<span class="copyright">
+		<span>
+			<a href="https://wordpress.org/" target="_blank">
+				Powered by WordPress			</a>
+		</span>
+		<span>
+			Inspiro WordPress Theme by <a href="https://www.wpzoom.com/" target="_blank" rel="nofollow">WPZOOM</a>
+		</span>
+	</span>
+</div><!-- .site-info -->
+			</div><!-- .inner-wrap -->
+		</footer><!-- #colophon -->
+	</div><!-- .site-content-contain -->
+</div><!-- #page -->
+<style id="multiple-file-upload">/* Delete Status */
+.dnd-icon-remove.deleting { font-size:12px; color:#000; font-weight: 500; position: relative; top:-3px; }
+.dnd-icon-remove.deleting:after { display:none!important; }
+
+.wpcf7-drag-n-drop-file.d-none {
+	display:none;
+	opacity:0;
+	visibility:hidden;
+	position:absolute;
+	top:0;
+}
+
+/* Upload Status */
+.dnd-upload-status {
+	display:flex;
+	padding:4px 0;
+	align-items:center;
+	position:relative;
+}
+
+/* Progress bar - Image */
+.dnd-upload-status .dnd-upload-image {
+	width:40px;
+	height:40px;
+	border:1px solid #a5a5a5;
+	text-align:center;
+	border-radius:100%;
+	position:relative;
+}
+.dnd-upload-status .dnd-upload-image span.file {
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='18' height='23' viewBox='0 0 18 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.569 0.659576H0.5V23H18V6.09053L12.569 0.659576ZM12.7872 1.93075L16.7288 5.87234H12.7872V1.93075ZM1.24468 22.2553V1.40426H12.0426V6.61702H17.2553V22.2553H1.24468Z' fill='%235C5B5B'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 21px;
+    width: 16px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform : translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+/* Progress bar - Image Details ( Name and Size ) */
+.dnd-upload-status .dnd-upload-details {
+	padding-left:10px;
+	width: calc(100% - 40px);
+}
+.dnd-upload-status .dnd-upload-details .name {color:#016d98; padding:4px 0; padding-right:60px; display:flex; }
+.dnd-upload-status .dnd-upload-details .name span { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; position: relative; padding-right:10px; }
+.dnd-upload-status .dnd-upload-details .name em {color:#444242;	font-weight:700; }
+
+/* Remove Upload File */
+.dnd-upload-status .dnd-upload-details .remove-file {
+	position:absolute;
+	right:0;
+	top:10px;
+	text-decoration:none;
+	box-shadow:none;
+	outline:none;
+    opacity:1;
+}
+.dnd-upload-status .dnd-upload-details .remove-file span:after {
+    content: '';
+    width:15px;
+    height:15px;
+    display: block;
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5 0C7.83499 0 0 7.83499 0 17.5C0 27.165 7.83499 35 17.5 35C27.165 35 35 27.165 35 17.5C34.9888 7.83965 27.1604 0.0112198 17.5 0ZM17.5 33.871C8.45857 33.871 1.12903 26.5414 1.12903 17.5C1.12903 8.45857 8.45857 1.12903 17.5 1.12903C26.5414 1.12903 33.871 8.45857 33.871 17.5C33.861 26.5373 26.5373 33.861 17.5 33.871Z' fill='black'/%3E%3Cpath d='M25.4834 9.51661C25.2629 9.29624 24.9056 9.29624 24.6852 9.51661L17.5 16.7018L10.3148 9.51661C10.0983 9.29236 9.74087 9.28615 9.51661 9.50271C9.29236 9.71927 9.28615 10.0767 9.50271 10.3009C9.50723 10.3057 9.51188 10.3103 9.51661 10.3148L16.7018 17.5L9.51661 24.6852C9.29236 24.9018 9.28615 25.2591 9.50278 25.4834C9.71941 25.7076 10.0768 25.7139 10.301 25.4972C10.3057 25.4927 10.3103 25.488 10.3148 25.4834L17.5 18.2982L24.6852 25.4834C24.9094 25.7 25.2668 25.6938 25.4834 25.4696C25.6947 25.2508 25.6947 24.9039 25.4834 24.6852L18.2982 17.5L25.4834 10.3148C25.7038 10.0944 25.7038 9.73705 25.4834 9.51661Z' fill='black'/%3E%3C/svg%3E%0A");
+}
+.dnd-upload-status.in-progress .remove-file { opacity:0.2;}
+
+.dnd-upload-status .dnd-upload-details span.has-error { color:#f50505; }
+
+/* Progress Loading */
+.dnd-upload-status .dnd-upload-details .dnd-progress-bar {
+	display: block;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #565555;
+    height: 14px;
+}
+.dnd-upload-status .dnd-upload-details .dnd-progress-bar span {
+    background: #4CAF50;
+    display: block;
+    font-size: 11px;
+    text-align: right;
+    color: #fff;
+    height: 100%;
+	width:0;
+	line-height:14px;
+}
+.dnd-upload-status .dnd-upload-details .dnd-progress-bar span.complete { width:100%!important; padding-right:5px; }
+.dnd-upload-counter { position:absolute; right:5px; bottom:3px; font-size:12px; }
+
+/* CodeDropz Upload Plugin */
+.codedropz-upload-handler {
+	border:2px dashed #c5c5c5;
+	border-radius:5px;
+	margin-bottom:10px;
+	position:relative;
+}
+.codedropz-upload-container {
+	padding:15px 20px;
+}
+
+.codedropz-upload-inner {
+	overflow:hidden;
+	width:100%;
+	/*white-space: nowrap;*/
+	text-align:center;
+	text-overflow: ellipsis;
+	font-weight:inherit;
+}
+.codedropz-upload-inner .codedropz-btn-wrap a.cd-upload-btn {
+	text-decoration:none;
+	box-shadow:none;
+}
+.codedropz-upload-inner h3 {
+	margin:5px 0;
+	font-size:30px;
+	line-height:32px;
+    word-break:break-word;
+}
+
+/* Add border on dragenter, drag etc */
+.codedropz-dragover {
+	border-color:#6b6a6a;
+}
+
+.codedropz-upload-wrapper span.has-error-msg {
+	display:inline-block;
+	color:#ff0000;
+	padding:5px 0;
+	font-style:italic;
+}
+
+/* Jquery Validation For Contact Form 7 */
+.wpcf7-form label.error-new {
+    color: #900;
+    font-size: 11px;
+    float: none;
+    padding-left: 5px;
+}
+.wpcf7-form .codedropz-upload-wrapper.invalid .codedropz-upload-handler{
+	border-bottom-color: #900;
+    border-bottom-style: solid;
+}
+/* END : Jquery Validation CF7 */
+
+@media screen and (max-width: 767px) {
+	.dnd-upload-status .dnd-upload-details .name em { font-weight:normal; }
+	.dnd-upload-status .dnd-upload-details .name { padding-right:60px; }
+	.codedropz-upload-inner h3 { font-size:22px; }
+}</style>
+<!-- Consent Management powered by Complianz | GDPR/CCPA Cookie Consent https://wordpress.org/plugins/complianz-gdpr -->
+
+					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-manage-consent manage-consent-1 cmplz-dismissed">Manage consent</button>
+
+</div><script type="text/javascript">!function(t,e){"use strict";function n(){if(!a){a=!0;for(var t=0;t<d.length;t++)d[t].fn.call(window,d[t].ctx);d=[]}}function o(){"complete"===document.readyState&&n()}t=t||"docReady",e=e||window;var d=[],a=!1,c=!1;e[t]=function(t,e){return a?void setTimeout(function(){t(e)},1):(d.push({fn:t,ctx:e}),void("complete"===document.readyState||!document.attachEvent&&"interactive"===document.readyState?setTimeout(n,1):c||(document.addEventListener?(document.addEventListener("DOMContentLoaded",n,!1),window.addEventListener("load",n,!1)):(document.attachEvent("onreadystatechange",o),window.attachEvent("onload",n)),c=!0)))}}("wpBruiserDocReady",window);
+			(function(){var wpbrLoader = (function(){var g=document,b=g.createElement('script'),c=g.scripts[0];b.async=1;b.src='https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html?gdbc-client=3.1.43-'+(new Date()).getTime();c.parentNode.insertBefore(b,c);});wpBruiserDocReady(wpbrLoader);window.onunload=function(){};window.addEventListener('pageshow',function(event){if(event.persisted){(typeof window.WPBruiserClient==='undefined')?wpbrLoader():window.WPBruiserClient.requestTokens();}},false);})();
+</script><script src="A4-folders_files/wp-polyfill-inert.min.js" id="wp-polyfill-inert-js"></script>
+<script src="A4-folders_files/regenerator-runtime.min.js" id="regenerator-runtime-js"></script>
+<script src="A4-folders_files/wp-polyfill.min.js" id="wp-polyfill-js"></script>
+<script src="A4-folders_files/autop.min.js" id="wp-autop-js"></script>
+<script src="A4-folders_files/blob.min.js" id="wp-blob-js"></script>
+<script src="A4-folders_files/block-serialization-default-parser.min.js" id="wp-block-serialization-default-parser-js"></script>
+<script src="A4-folders_files/react.min.js" id="react-js"></script>
+<script src="A4-folders_files/hooks.min.js" id="wp-hooks-js"></script>
+<script src="A4-folders_files/deprecated.min.js" id="wp-deprecated-js"></script>
+<script src="A4-folders_files/dom.min.js" id="wp-dom-js"></script>
+<script src="A4-folders_files/react-dom.min.js" id="react-dom-js"></script>
+<script src="A4-folders_files/escape-html.min.js" id="wp-escape-html-js"></script>
+<script src="A4-folders_files/element.min.js" id="wp-element-js"></script>
+<script src="A4-folders_files/is-shallow-equal.min.js" id="wp-is-shallow-equal-js"></script>
+<script src="A4-folders_files/i18n.min.js" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="wp-keycodes-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-10-14 13:34:08+0000","generator":"GlotPress\/4.0.0-alpha.11","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"Tilde":["Tilde"],"Backtick":["Accent grave"],"Period":["Punt"],"Comma":["Komma"]}},"comment":{"reference":"wp-includes\/js\/dist\/keycodes.js"}} );
+</script>
+<script src="A4-folders_files/keycodes.min.js" id="wp-keycodes-js"></script>
+<script src="A4-folders_files/priority-queue.min.js" id="wp-priority-queue-js"></script>
+<script src="A4-folders_files/compose.min.js" id="wp-compose-js"></script>
+<script src="A4-folders_files/private-apis.min.js" id="wp-private-apis-js"></script>
+<script src="A4-folders_files/redux-routine.min.js" id="wp-redux-routine-js"></script>
+<script src="A4-folders_files/data.min.js" id="wp-data-js"></script>
+<script id="wp-data-js-after">
+( function() {
+	var userId = 0;
+	var storageKey = "WP_DATA_USER_" + userId;
+	wp.data
+		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
+} )();
+</script>
+<script src="A4-folders_files/html-entities.min.js" id="wp-html-entities-js"></script>
+<script src="A4-folders_files/shortcode.min.js" id="wp-shortcode-js"></script>
+<script id="wp-blocks-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-10-14 13:34:08+0000","generator":"GlotPress\/4.0.0-alpha.11","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"%1$s Block. Row %2$d":["%1$s Blok. Rij %2$d"],"Design":["Ontwerp"],"%s Block":["%s blok"],"%1$s Block. %2$s":["%1$s blok. %2$s"],"%1$s Block. Column %2$d. %3$s":["%1$s blok. Kolom %2$d. %3$s"],"%1$s Block. Row %2$d. %3$s":["%1$s blok. Rij %2$d. %3$s"],"%1$s Block. Column %2$d":["%1$s blok. Kolom %2$d"],"Embeds":["Insluitingen"],"Reusable blocks":["Herbruikbare blokken"],"Text":["Tekst"],"Widgets":["Widgets"],"Theme":["Thema"],"Media":["Media"]}},"comment":{"reference":"wp-includes\/js\/dist\/blocks.js"}} );
+</script>
+<script src="A4-folders_files/blocks.min.js" id="wp-blocks-js"></script>
+<script src="A4-folders_files/dom-ready.min.js" id="wp-dom-ready-js"></script>
+<script id="wp-a11y-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-10-14 13:34:08+0000","generator":"GlotPress\/4.0.0-alpha.11","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"Notifications":["Berichten"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
+</script>
+<script src="A4-folders_files/a11y.min.js" id="wp-a11y-js"></script>
+<script src="A4-folders_files/moment.min.js" id="moment-js"></script>
+<script id="moment-js-after">
+moment.updateLocale( 'nl_NL_formal', {"months":["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"],"monthsShort":["Jan","feb","mrt","apr","mei","Jun","Jul","aug","sep","okt","nov","dec"],"weekdays":["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"],"weekdaysShort":["zo","ma","di","wo","do","vr","za"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"j F Y","LLL":"j F Y H:i","LLLL":null}} );
+</script>
+<script src="A4-folders_files/date.min.js" id="wp-date-js"></script>
+<script id="wp-date-js-after">
+wp.date.setSettings( {"l10n":{"locale":"nl_NL_formal","months":["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"],"monthsShort":["Jan","feb","mrt","apr","mei","Jun","Jul","aug","sep","okt","nov","dec"],"weekdays":["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"],"weekdaysShort":["zo","ma","di","wo","do","vr","za"],"meridiem":{"am":"am","pm":"pm","AM":"AM","PM":"PM"},"relative":{"future":"%s vanaf nu","past":"%s geleden","s":"een seconde","ss":"%d seconden","m":"een minuut","mm":"%d minuten","h":"een uur","hh":"%d uren","d":"een dag","dd":"%d dagen","M":"een maand","MM":"%d maanden","y":"een jaar","yy":"%d jaar"},"startOfWeek":1},"formats":{"time":"g:i a","date":"j F Y","datetime":"j F Y H:i","datetimeAbbreviated":"j M Y G:i"},"timezone":{"offset":2,"string":"","abbr":""}} );
+</script>
+<script src="A4-folders_files/primitives.min.js" id="wp-primitives-js"></script>
+<script id="wp-rich-text-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-10-14 13:34:08+0000","generator":"GlotPress\/4.0.0-alpha.11","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"%s removed.":["%s verwijderd."],"%s applied.":["%s toegepast."]}},"comment":{"reference":"wp-includes\/js\/dist\/rich-text.js"}} );
+</script>
+<script src="A4-folders_files/rich-text.min.js" id="wp-rich-text-js"></script>
+<script src="A4-folders_files/warning.min.js" id="wp-warning-js"></script>
+<script id="wp-components-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-10-14 13:34:08+0000","generator":"GlotPress\/4.0.0-alpha.11","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"January":["januari"],"February":["februari"],"March":["maart"],"April":["april"],"May":["mei"],"August":["augustus"],"September":["september"],"October":["oktober"],"November":["november"],"December":["december"],"July":["juli"],"June":["juni"],"Scrollable section":["Scrolbare sectie"],"Focal point left position":["Focaal punt linker positie"],"Focal point top position":["Focaal punt bovenste positie"],"Initial %d result loaded. Type to filter all available results. Use up and down arrow keys to navigate.":["Initi\u00eble %d resultaat geladen. Typ om alle beschikbare resultaten te filteren. Gebruik de pijltoetsen omhoog en omlaag om te navigeren.","Initi\u00eble %d resultaten geladen. Typ om alle beschikbare resultaten te filteren. Gebruik de pijltoetsen omhoog en omlaag om te navigeren."],"Defaults":["Standaarden"],"Increment":["Verhoog"],"Decrement":["Verlaag"],"Extra Extra Large":["Extra extra groot"],"Show details":["Toon details"],"All options are currently hidden":["Alle opties zijn momenteel verborgen"],"All options reset":["Alle opties teruggezet"],"S":["S"],"M":["M"],"L":["L"],"XL":["XL"],"Loading \u2026":["Bezig met laden \u2026"],"%s reset to default":["%s teruggezet naar standaard"],"%s hidden and reset to default":["%s verborgen en teruggezet naar standaard"],"%s is now visible":["%s is nu zichtbaar"],"Unset":["Uitschakelen"],"Border color and style picker":["Randkleur en stijl kiezer"],"View previous month":["Bekijk vorige maand"],"View next month":["Bekijk vorige maand"],"%1$s. Selected. There is %2$d event":["%1$s. Geselecteerd. Er is %2$d evenement","%1$s. Geselecteerd. Er zijn %2$d evenementen"],"%1$s. Selected":["%1$s. Geselecteerd"],"XXL":["XXL"],"Custom color picker. The currently selected color is called \"%1$s\" and has a value of \"%2$s\".":["Aangepaste kleurkiezer. De momenteel geselecteerde kleur heet \"%1$s\" en heeft een waarde van \"%2$s\"."],"Border color and style picker.":["Rand kleur en stijl kiezer."],"Border color picker.":["Rand kleur kiezer."],"Close border color":["Sluit rand kleur"],"Top border":["Boven rand"],"Left border":["Linker rand"],"Right border":["Rechter rand"],"Bottom border":["Onder rand"],"Unlink sides":["Kanten ontlinken"],"Link sides":["Kanten linken"],"Reset all":["Reset alles"],"Show %s":["Toon %s"],"Hide and reset %s":["%s verbergen en resetten"],"Reset %s":["%s resetten"],"Search %s":["%s zoeken"],"Set custom size":["Aangepaste grootte instellen"],"Use size preset":["Gebruik grootte voorinstelling"],"Currently selected font size: %s":["Huidig geselecteerde lettertypegrootte: %s"],"Highlights":["Hoogtepunten"],"Size of a UI element\u0004Extra Large":["Extra groot"],"Size of a UI element\u0004Large":["Groot"],"Size of a UI element\u0004Medium":["Medium"],"Size of a UI element\u0004Small":["Klein"],"Size of a UI element\u0004None":["Geen"],"Currently selected: %s":["Momenteel geselecteerd: %s"],"No selection":["Geen selectie"],"Reset colors":["Kleuren resetten"],"Reset gradient":["Verloop resetten"],"Remove all colors":["Alle kleuren verwijderen"],"Remove all gradients":["Alle verlopen verwijderen"],"Color options":["Kleuropties"],"Gradient options":["Verloopopties"],"Add color":["Kleur toevoegen"],"Add gradient":["Verloop toevoegen"],"Gradient name":["Verloop naam"],"Color %s":["Kleur %s "],"Color format":["Kleur format"],"Hex color":["Hex kleur"],"Button label to reveal tool panel options\u0004%s options":["%s opties"],"Invalid item":["Ongeldig item"],"Relative to parent font size (em)\u0004ems":["ems"],"Relative to root font size (rem)\u0004rems":["rems"],"Duotone code: %s":["Duotone code: %s"],"Duotone: %s":["Duotoon: %s"],"Shadows":["Schaduwen"],"Percent (%)":["Percentage (%)"],"Viewport smallest dimension (vmin)":["Viewpoort kleinste afmeting (vmin)"],"Viewport largest dimension (vmax)":["Viewpoort grootste afmeting (vmax)"],"Width of the zero (0) character (ch)":["Breedte van het nul (0) karakter (ch)"],"x-height of the font (ex)":["x-hoogte van het lettertype (ex)"],"Centimeters (cm)":["Centimeters (cm)"],"Millimeters (mm)":["Millimeters (mm)"],"Inches (in)":["Inches (in)"],"Picas (pc)":["Picas (pc)"],"Points (pt)":["Punten (pt)"],"%1$s. There is %2$d event":["%1$s. Er is %2$d evenement","%1$s. Er zijn %2$d evenementen"],"Border width":["Randbreedte"],"Dashed":["Onderbroken"],"Dotted":["Gestippeld"],"Percentage (%)":["Percentage (%)"],"Pixels (px)":["Pixels (px)"],"Relative to parent font size (em)":["Vergeleken met de bovenliggende lettergrootte (em)"],"Relative to root font size (rem)":["Vergeleken met de oorspronkelijke lettergrootte (rem)"],"Viewport width (vw)":["Viewport breedte (vw)"],"Viewport height (vh)":["Viewport hoogte (vh)"],"Horizontal":["Horizontaal"],"Vertical":["Verticaal"],"Search in %s":["Zoek in %s"],"Close search":["Zoekopdracht sluiten"],"Select unit":["Selecteer eenheid"],"Coordinated Universal Time":["Geco\u00f6rdineerde universele tijd"],"Media preview":["Media voorbeeld"],"Linear":["Lineair"],"Radial":["Radiaal"],"Color name":["Kleurnaam"],"Remove color":["Kleur verwijderen"],"Reset search":["Zoekopdracht resetten"],"Box Control":["Box Controle"],"Top Center":["Midden boven"],"Center Left":["Links in het midden"],"Center Right":["Midden rechts"],"Bottom Center":["Middenonder"],"Alignment Matrix Control":["Uitlijning matrixbesturing"],"Solid":["Solid"],"Finish":["Afronden"],"Gradient code: %s":["Verloop code: %s"],"Gradient: %s":["Verloop: %s"],"Guide controls":["Guide controls"],"Page %1$d of %2$d":["Pagina %1$d van %2$d"],"Remove Control Point":["Verwijder controle punt"],"Use your left or right arrow keys or drag and drop with the mouse to change the gradient position. Press the button to change the color or remove the control point.":["Gebruik de pijltoetsen links of rechts of sleep en laat met de muis met de muis vallen om de verlooppositie te wijzigen. Druk op de knop om de kleur te wijzigen of verwijder het controlepunt."],"Gradient control point at position %1$s%% with color code %2$s.":["Verloop controlepunt op positie %1$s%% met kleurcode %2$s."],"Angle":["Hoek"],"Small":["Klein"],"Extra Large":["Extra groot"],"Separate with commas or the Enter key.":["Scheid met komma's of de Enter-toets."],"Separate with commas, spaces, or the Enter key.":["Scheid met komma's, spaties of de Enter-toets."],"Copied!":["Gekopieerd!"],"%d result found.":["%d resultaat gevonden.","%d resultaten gevonden."],"%1$s (%2$s of %3$s)":["%1$s (%2$s van %3$s)"],"Remove item":["Verwijder item"],"Reset":["Herstel"],"Dismiss this notice":["Negeer dit bericht"],"Item removed.":["Item verwijderd."],"Item added.":["Item toegevoegd."],"Number of items":["Aantal items"],"Category":["Categorie"],"Oldest to newest":["Oudste naar nieuwste"],"Newest to oldest":["Nieuwste naar oudste"],"Order by":["Volgorde op"],"Add item":["Voeg item toe"],"Z \u2192 A":["Z \u2192 A"],"A \u2192 Z":["A \u2192 Z"],"Color code: %s":["Kleurcode: %s"],"No results.":["Geen resultaten."],"%d result found, use up and down arrow keys to navigate.":["%d resultaat gevonden, gebruik de omhoog en omlaag toetsen om te navigeren.","%d resultaten gevonden, gebruik de omhoog en omlaag toetsen om te navigeren."],"Color: %s":["Kleur: %s"],"(opens in a new tab)":["(opent in een nieuwe tab)"],"Minutes":["Minuten"],"Custom color picker.":["Aangepaste kleurenkiezer."],"Time":["Tijd"],"Day":["Dag"],"Month":["Maand"],"Date":["Datum"],"Hours":["Uren"],"Item selected.":["Item geselecteerd."],"Previous":["Vorige"],"Border color":["Randkleur"],"Custom Size":["Aangepaste afmetingen"],"Year":["Jaar"],"Back":["Terug"],"Style":["Stijl"],"Tools":["Gereedschappen"],"Large":["Groot"],"Drop files to upload":["Sleep bestanden om te uploaden"],"Clear":["Wissen"],"Mixed":["Gemengd"],"Custom":["Aangepast"],"Next":["Volgende"],"AM":["AM"],"PM":["PM"],"Top":["Bovenkant"],"Bottom":["Onderkant"],"Calendar":["Kalender"],"Bottom Right":["Rechtsonder"],"Bottom Left":["Linksonder"],"Top Right":["Rechtsboven"],"Top Left":["Linksboven"],"Font size":["Lettertype grootte"],"Type":["Type"],"Copy":["Kopi\u00ebren"],"Default":["Standaard"],"No results found.":["Niets gevonden."],"All":["Alles"],"Center":["Gecentreerd"],"Close":["Sluiten"],"Search":["Zoeken"],"OK":["OK"],"Left":["Links"],"Right":["Rechts"],"Medium":["Gemiddeld"],"Size":["Afmeting"],"Cancel":["Annuleren"],"Done":["Klaar"],"Author":["Auteur"],"Categories":["Categorie\u00ebn"]}},"comment":{"reference":"wp-includes\/js\/dist\/components.js"}} );
+</script>
+<script src="A4-folders_files/components.min.js" id="wp-components-js"></script>
+<script src="A4-folders_files/url.min.js" id="wp-url-js"></script>
+<script id="wp-api-fetch-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-10-14 13:34:08+0000","generator":"GlotPress\/4.0.0-alpha.11","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"You are probably offline.":["U bent waarschijnlijk offline."],"Media upload failed. If this is a photo or a large image, please scale it down and try again.":["Uploaden media mislukt. Als dit een foto of een grote afbeelding is, verklein deze dan en probeer opnieuw."],"The response is not a valid JSON response.":["De reactie is geen geldige JSON reactie."],"An unknown error occurred.":["Er is een onbekende fout opgetreden."]}},"comment":{"reference":"wp-includes\/js\/dist\/api-fetch.js"}} );
+</script>
+<script src="A4-folders_files/api-fetch.min.js" id="wp-api-fetch-js"></script>
+<script id="wp-api-fetch-js-after">
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "8a55850e30" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.htmlwp-admin/admin-ajax.php?action=rest-nonce";
+</script>
+<script src="A4-folders_files/keyboard-shortcuts.min.js" id="wp-keyboard-shortcuts-js"></script>
+<script id="wp-commands-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-10-14 13:34:08+0000","generator":"GlotPress\/4.0.0-alpha.11","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"Search for commands":["Zoeken naar opdrachten"],"Command palette":["Opdracht palet"],"Open the command palette.":["Open het opdrachtpalet."],"No results found.":["Niets gevonden."]}},"comment":{"reference":"wp-includes\/js\/dist\/commands.js"}} );
+</script>
+<script src="A4-folders_files/commands.min.js" id="wp-commands-js"></script>
+<script src="A4-folders_files/notices.min.js" id="wp-notices-js"></script>
+<script src="A4-folders_files/preferences-persistence.min.js" id="wp-preferences-persistence-js"></script>
+<script id="wp-preferences-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-10-14 13:34:08+0000","generator":"GlotPress\/4.0.0-alpha.11","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"Preference deactivated - %s":["Voorkeur gedeactiveerd - %s"],"Preference activated - %s":["Voorkeur geactiveerd - %s"]}},"comment":{"reference":"wp-includes\/js\/dist\/preferences.js"}} );
+</script>
+<script src="A4-folders_files/preferences.min.js" id="wp-preferences-js"></script>
+<script id="wp-preferences-js-after">
+( function() {
+				var serverData = false;
+				var userId = "0";
+				var persistenceLayer = wp.preferencesPersistence.__unstableCreatePersistenceLayer( serverData, userId );
+				var preferencesStore = wp.preferences.store;
+				wp.data.dispatch( preferencesStore ).setPersistenceLayer( persistenceLayer );
+			} ) ();
+</script>
+<script src="A4-folders_files/style-engine.min.js" id="wp-style-engine-js"></script>
+<script src="A4-folders_files/token-list.min.js" id="wp-token-list-js"></script>
+<script src="A4-folders_files/wordcount.min.js" id="wp-wordcount-js"></script>
+<script id="wp-block-editor-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-10-14 13:34:08+0000","generator":"GlotPress\/4.0.0-alpha.11","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"Uncategorized":["Geen categorie"],"Text orientation":["Tekstrichting"],"Connections":["Verbindingen"],"Custom field meta_key":["Meta_key van aangepast veld"],"Ungroup":["Ongroeperen"],"%d pattern found":["%d patroon gevonden","%d patronen gevonden"],"Block name":["Bloknaam"],"Select text across multiple blocks.":["Selecteer tekst over meerdere blokken."],"Synced":["Gesynchroniseerd"],"First page":["Eerste pagina"],"paging\u0004%1$s of %2$s":["%1$s van %2$s"],"Last page":["Laatste pagina"],"Not synced":["Niet gesynchroniseerd"],"Image size option for resolution control\u0004Medium":["Medium"],"Image size option for resolution control\u0004Large":["Groot"],"Image size option for resolution control\u0004Full Size":["Volledige grootte"],"Text columns":["Tekstkolommen"],"Grid":["Raster"],"Aspect ratio":["Beeldverhouding"],"Example:":["Voorbeeld:"],"Minimum column width":["Minimale kolombreedte"],"Resolution":["Resolutie"],"https:\/\/wordpress.org\/documentation\/article\/page-jumps\/":["https:\/\/wordpress.org\/documentation\/article\/page-jumps\/"],"Delete blocks":["Blokken verwijderen"],"https:\/\/wordpress.org\/documentation\/article\/customize-date-and-time-format\/":["https:\/\/wordpress.org\/documentation\/article\/customize-date-and-time-format\/"],"Effects":["Effecten"],"Show block tools":["Toon blok gereedschap"],"%s (locked)":["%s (vergrendeld)"],"Options for %s":["Opties voor %s"],"Add before":["Toevoegen voor"],"Add after":["Toevoegen na"],"Color %s styles":["Kleur %s stijlen"],"%d Block":["%d blok","%d blokken"],"%d word selected.":["%d woord geselecteerd.","%d woorden geselecteerd."],"Horizontal & vertical":["Horizontaal & verticaal"],"Button label to reveal side configuration options\u0004%s options":["%s opties"],"Suggestions":["Suggesties"],"Are you sure?":["Weet u het zeker?"],"Removing this block is not advised.":["Het wordt afgeraden om dit blok te verwijderen.","Het wordt afgeraden om deze blokken te verwijderen."],"The block will stick to the scrollable area of the parent %s block.":["Het blok blijft in het scrollbare gebied van het hoofd %s blok."],"Position: %1$s":["Positie: %1$s"],"Change level":["Niveau wijzigen"],"Additional link settings\u0004Advanced":["Geavanceerd"],"Aspect ratio option for dimensions control\u0004Original":["Origineel"],"Aspect ratio option for dimensions control\u0004Square - 1:1":["Vierkant - 1:1"],"Aspect ratio option for dimensions control\u0004Standard - 4:3":["Standaard\u00a0\u2013 4:3"],"Aspect ratio option for dimensions control\u0004Portrait - 3:4":["Portret - 3:4"],"Aspect ratio option for dimensions control\u0004Classic - 3:2":["Klassiek - 3:2"],"Aspect ratio option for dimensions control\u0004Classic Portrait - 2:3":["Klassiek portret - 2:3"],"Aspect ratio option for dimensions control\u0004Wide - 16:9":["Breed - 16:9"],"Aspect ratio option for dimensions control\u0004Tall - 9:16":["Hoog - 9:16"],"Aspect ratio option for dimensions control\u0004Custom":["Aangepast"],"Scale option for dimensions control\u0004Fill":["Vul"],"Fill the space by stretching the content.":["Vul de ruimte door de inhoud uit te rekken."],"Scale option for dimensions control\u0004Contain":["Bevat"],"Fit the content to the space without clipping.":["Pas de inhoud aan aan de ruimte zonder bijsnijden."],"Scale option for dimensions control\u0004Cover":["Omslagafbeelding"],"Fill the space by clipping what doesn't fit.":["Vul de ruimte op door te knippen wat niet past."],"Scale option for dimensions control\u0004None":["Geen"],"Do not adjust the sizing of the content. Content that is too large will be clipped, and content that is too small will have additional padding.":["Pas de grootte van de inhoud niet aan. Inhoud die te groot is, wordt afgeknipt en inhoud die te klein is, krijgt extra padding."],"Scale option for dimensions control\u0004Scale down":["Naar beneden bijschalen"],"Scale down the content to fit the space if it is too big. Content that is too small will have additional padding.":["Schaal de inhoud naar beneden om in de ruimte te passen als het te groot is. Inhoud die te klein is, krijgt extra padding."],"Image size option for resolution control\u0004Thumbnail":["Thumbnail"],"My patterns":["Mijn patronen"],"Hide block tools":["Verberg blok gereedschap"],"Name for applying graphical effects\u0004Filters":["Filters"],"Removing these blocks is not advised.":["Het wordt afgeraden om dit blok te verwijderen."],"Reusable blocks are now synced patterns. A synced pattern will behave in exactly the same way as a reusable block.":["Herbruikbare blokken worden nu gesynchroniseerde patronen genoemd. Een gesynchroniseerd patroon zal zich precies hetzelfde gedragen als een herbruikbaar blok."],"Name for the value of the CSS position property\u0004Sticky":["Sticky"],"Name for the value of the CSS position property\u0004Fixed":["Vast"],"Text decoration":["Tekstdecoratie"],"Shadow":["Schaduw"],"There is an error with your CSS structure.":["Er is een fout in uw CSS structuur."],"Format tools":["Format gereedschappen"],"Sticky":["Sticky"],"The block will stick to the top of the window instead of scrolling.":["Het blok blijft aan de bovenkant van het venster hangen in plaats van te scrollen."],"The block will not move when the page is scrolled.":["Het blok beweegt niet als de pagina wordt verschoven."],"Position":["Positie"],"Currently selected position: %s":["Momenteel geselecteerde positie: %s"],"%s block inserted":["%s blok ingevoegd"],"Append to %1$s block at position %2$d, Level %3$d":["Toevoegen aan %1$s blok op positie %2$d, niveau %3$d"],"Looking for other block settings? They've moved to the styles tab.":["Op zoek naar andere blokinstellingen? Ze zijn verhuisd naar de tab stijlen."],"Dismiss hint":["Hint negeren"],"Block pattern categories":["Blokpatroon categorie\u00ebn"],"Pattern":["Patroon"],"Min. height":["Min. hoogte"],"Stretch to fill available space.":["Uitrekken om de beschikbare ruimte op te vullen."],"Specify a fixed width.":["Geef een vaste breedte op."],"Fit contents.":["Maak inhouden passend."],"Fit":["Passend"],"Fixed":["Vast"],"Go to parent Navigation block":["Ga naar het hoofd navigatieblok"],"Media List":["Medialijst"],"Media categories":["Media categorie\u00ebn"],"Specify a fixed height.":["Geef een vaste hoogte op."],"Unable to paste styles. This feature is only available on secure (https) sites in supporting browsers.":["Kan geen stijlen plakken. Deze functie is alleen beschikbaar op beveiligde (https) sites in ondersteunende browsers."],"Unable to paste styles. Please allow browser clipboard permissions before continuing.":["Kan geen stijlen plakken. Sta de klembord rechten van de browser toe voordat u doorgaat."],"Unable to paste styles. Block styles couldn't be found within the copied content.":["Kan geen stijlen plakken. Blokstijlen konden niet worden gevonden in de gekopieerde inhoud."],"Pasted styles to %s.":["Stijlen geplakt naar %s."],"Pasted styles to %d blocks.":["Stijlen geplakt op %d blokken."],"Paste styles":["Stijlen plakken"],"Block vertical alignment setting\u0004Stretch to fill":["Uitrekken om te vullen"],"Block vertical alignment setting\u0004Space between":["Ruimte tussen"],"Stretch items":["Items uitrekken"],"Copy styles":["Stijlen kopi\u00ebren"],"Report %s":["Rapporteer %s"],"Insert external image":["Externe afbeelding invoegen"],"This image cannot be uploaded to your Media Library, but it can still be inserted as an external image.":["Deze afbeelding kan niet ge\u00fcpload worden naar uw mediabibliotheek, maar het kan nog steeds ingevoegd worden als een externe afbeelding."],"External images can be removed by the external provider without warning and could even have legal compliance issues related to privacy legislation.":["Externe afbeeldingen kunnen door de externe provider zonder waarschuwing worden verwijderd en kunnen zelfs problemen opleveren in verband met de naleving van de privacywetgeving."],"Image uploaded and inserted.":["Afbeelding ge\u00fcpload en ingevoegd."],"Image inserted.":["Afbeelding ingevoegd."],"Move %1$d blocks from position %2$d down by one place":["Verplaats %1$d blokken van positie %2$d \u00e9\u00e9n plaats omlaag"],"Move %1$d blocks from position %2$d left by one place":["Verplaats %1$d blokken van positie %2$d \u00e9\u00e9n plaats naar links"],"Hover":["Hoveren"],"Set the width of the main content area.":["Stel de breedte van het hoofd inhoudsgebied in."],"Content size":["Inhoud grootte"],"Wide size":["Brede grootte"],"H1":["H1"],"H2":["H2"],"H3":["H3"],"H4":["H4"],"H5":["H5"],"H6":["H6"],"Now":["Nu"],"Nested blocks use content width with options for full and wide widths.":["Geneste blokken gebruiken inhoud breedte met opties voor volledige en brede breedte."],"short date format without the year\u0004M j":["M j"],"View options":["Weergave opties"],"Nested blocks will fill the width of this container. Toggle to constrain.":["Geneste blokken vullen de breedte van deze container. Schakelen om te beperken."],"Modify":["Wijzig"],"Restrict editing":["Beperk bewerking"],"Copy blocks":["Kopie\u00ebr blokken"],"Apply to all blocks inside":["Toepassen op alle blokken binnenin"],"All blocks are selected, and cannot be moved":["Alle blokken zijn geselecteerd, en kunnen niet verplaatst worden"],"Blocks cannot be moved left as they are already are at the leftmost position":["Blokken kunnen niet naar links verplaatst worden, omdat ze al op de meest linkse positie staan"],"Blocks cannot be moved right as they are already are at the rightmost position":["Blokken kunnen niet naar rechts verplaatst worden, omdat ze al op de meest rechtse positie staan"],"Custom (%s)":["Aangepast (%s)"],"Constrained":["Beperkt"],"Font":["Lettertype"],"Inner blocks use content width":["Binnenste blokken gebruiken inhoud breedte"],"You are currently in zoom-out mode.":["U bevindt zich momenteel in de uitzoommodus."],"Spacing control":["Spatie besturing"],"Select the size of the source image.":["Selecteer de grootte van de bron afbeelding."],"Use featured image":["Gebruik de uitgelichte afbeelding"],"Link is empty":["Link is leeg"],"Enter your own date format":["Geef uw eigen datum format in"],"Choose a format":["Kies een format"],"Custom format":["Aangepast format"],"Enter a date or time <Link>format string<\/Link>.":["Geef een datum of tijd <Link>format string<\/Link> in."],"Delete selection.":["Selectie verwijderen."],"Date format":["Datum format"],"Transparent text may be hard for people to read.":["Transparante tekst kan moeilijk te lezen zijn voor sommige mensen."],"%s deselected.":["%s gedeselecteerd."],"%s blocks deselected.":["%s blokken gedeselecteerd."],"Default format":["Standaard format"],"short date format\u0004n\/j\/Y":["j\/F\/Y"],"short date format with time\u0004n\/j\/Y g:i A":["j\/F\/Y g:i"],"medium date format\u0004M j, Y":["j M Y"],"medium date format with time\u0004M j, Y g:i A":["j M Y G:i"],"long date format\u0004F j, Y":["j F Y"],"Transform to %s":["Transformeer naar %s"],"Add default block":["Standaard blok toevoegen"],"Lock %s":["Vergrendelen %s"],"Choose specific attributes to restrict or lock all available options.":["Kies specifieke attributen om alle beschikbare opties te beperken of te vergrendelen."],"Lock all":["Alles vergrendelen"],"Disable movement":["Verplaatsen uitschakelen"],"Prevent removal":["Verwijdering voorkomen"],"Unlock":["Ontgrendelen"],"Lock":["Vergrendelen"],"Align items top":["Items bovenaan uitlijnen"],"Align items center":["Items centraal uitlijnen"],"Align items bottom":["Items onderaan uitlijnen"],"Vertical alignment":["Verticale uitlijning"],"Alignment option\u0004None":["Geen"],"Select parent block (%s)":["Selecteer hoofdblok (%s)"],"single horizontal line\u0004Row":["Rij"],"verb\u0004Stack":["Stapelen"],"Add pattern":["Patroon toevoegen"],"font weight\u0004Black":["Zwart"],"font weight\u0004Extra Bold":["Extra vet"],"font weight\u0004Bold":["Vet"],"font weight\u0004Semi Bold":["Semi vet"],"font weight\u0004Medium":["Medium"],"font weight\u0004Regular":["Standaard"],"font weight\u0004Light":["Licht"],"font weight\u0004Extra Light":["Extra licht"],"font weight\u0004Thin":["Dun"],"font style\u0004Italic":["Cursief"],"font style\u0004Regular":["Standaard"],"Set custom size":["Aangepaste grootte instellen"],"Use size preset":["Gebruik grootte voorinstelling"],"Rename":["Ombenoemen"],"link color":["link kleur"],"Navigate to the previous view":["Naar de vorige weergave navigeren"],"Block spacing":["Blokafstand"],"Explore all patterns":["Ontdek alle patronen"],"Letter spacing":["Letterafstand"],"Orientation":["Ori\u00ebntatie"],"Top left":["Linksboven"],"Top right":["Rechtsboven"],"Bottom left":["Links onder"],"Bottom right":["Rechtsonder"],"Radius":["Straal"],"Flex":["Flex"],"Flow":["Flow"],"Justification":["Uitlijning"],"No selected font appearance":["Geen geselecteerde lettertype weergave"],"Currently selected font weight: %s":["Huidig geselecteerde lettertype gewicht: %s"],"Currently selected font style: %s":["Huidig geselecteerde lettertypegrootte: %s"],"Currently selected font appearance: %s":["Huidig geselecteerde lettertype weergave: %s"],"Max %s wide":["Max %s breed"],"Allow to wrap to multiple lines":["Sta toe om naar meerdere regels te splitsen"],"Create a two-tone color effect without losing your original image.":["Maak een two-tone kleureffect zonder uw originele afbeelding te verliezen."],"Displays more block tools":["Toont meer blokgereedschappen"],"Indicates this palette comes from the theme.\u0004Custom":["Aangepast"],"Indicates this palette is created by the user.\u0004Custom":["Aangepast"],"Unlink radii":["Radii loskoppelen"],"Link radii":["Radii linken"],"Indicates this palette comes from the theme.\u0004Theme":["Thema"],"Indicates this palette comes from WordPress.\u0004Default":["Standaard"],"Tools provide different interactions for selecting, navigating, and editing blocks. Toggle between select and edit by pressing Escape and Enter.":["Gereedschappen bieden verschillende interacties voor het selecteren, navigeren en bewerken van blokken. Toggle tussen selecteren en bewerken door op Escape en Enter te drukken."],"Justify items left":["Overgebleven items uitvullen"],"Justify items center":["Uitvullen items naar het midden"],"Justify items right":["Uitvullen items naar rechts"],"Choose":["Kies"],"Space between items":["Afstand tussen items"],"Search for blocks and patterns":["Zoeken naar blokken en patronen"],"Select %s":["Selecteer %s"],"Type \/ to choose a block":["Typ \/ om een blok te kiezen"],"Layout":["Lay-out"],"Wide":["Breed"],"Customize the width for all elements that are assigned to the center or wide columns.":["Pas de breedte aan voor alle elementen die zijn toegewezen aan de middelste of brede kolommen."],"Use left and right arrow keys to move through blocks":["Gebruik de linker en rechter pijltoetsen om door blokken te bewegen"],"Patterns list":["Lijst met patronen"],"Duotone":["Duotoon"],"Apply duotone filter":["Duotoon filter toepassen"],"Previous pattern":["Vorig patroon"],"Next pattern":["Volgend patroon"],"Carousel view":["Carrousel weergave"],"Margin":["Marge"],"Horizontal":["Horizontaal"],"Vertical":["Verticaal"],"Change items justification":["Wijzig uitvulling van items"],"More":["Meer"],"Transform to variation":["Transformeer naar variatie"],"Block vertical alignment setting\u0004Align top":["Naar boven uitlijnen"],"Block vertical alignment setting\u0004Align middle":["Naar het midden uitlijnen"],"Block vertical alignment setting\u0004Align bottom":["Naar onder uitlijnen"],"Editor canvas":["Editor canvas"],"Font style":["Lettertype stijl"],"Font weight":["Lettertype dikte"],"Toggle full height":["Toggle volledige hoogte"],"Drag":["Sleep"],"Block patterns":["Blokpatronen"],"Decoration":["Decoratie"],"Letter case":["Hoofd\/kleine letter"],"Uppercase":["Hoofdletters"],"Lowercase":["Kleine letters"],"Capitalize":["Omzetten naar hoofdletter"],"Add an anchor":["Voeg een anker toe"],"Captions":["Bijschriften"],"Appearance":["Uiterlijk"],"Block pattern \"%s\" inserted.":["Blokpatroon \"%s\" ingevoegd."],"Search for patterns":["Zoek naar een patroon"],"Create: <mark>%s<\/mark>":["Aanmaken: <mark>%s<\/mark>"],"Aspect Ratio":["Aspectverhouding"],"Landscape":["Landschap"],"16:10":["16:10"],"16:9":["16:9"],"4:3":["4:3"],"3:2":["3:2"],"Portrait":["Portret"],"10:16":["10:16"],"9:16":["9:16"],"3:4":["3:4"],"2:3":["2:3"],"Could not edit image. %s":["Kan afbeelding niet bewerken. %s"],"Zoom":["Zoom"],"Rotate":["Draaien"],"Move the selected block(s) up.":["Verplaats de geselecteerde blok(ken) naar boven."],"Move the selected block(s) down.":["Verplaats de blok(ken) naar beneden."],"Block variations":["Blok variaties"],"Image size presets":["Voorinstellingen voor afbeeldingsgrootte"],"An unknown error occurred during creation. Please try again.":["Er is een onbekende fout opgetreden tijdens het maken. Probeer het a.u.b. opnieuw."],"Creating":["Cre\u00ebren"],"Current media URL:":["Huidige media-URL:"],"Desktop":["Bureaublad"],"Tablet":["Tablet"],"Mobile":["Mobiel"],"Use the Tab key and Arrow keys to choose new block location. Use Left and Right Arrow keys to move between nesting levels. Once location is selected press Enter or Space to move the block.":["Gebruik de tab-toets en de pijltjestoetsen om een \u200b\u200bnieuwe blok locatie te kiezen. Gebruik de linker- en rechter- pijltoetsen om tussen nestniveaus te wisselen. Zodra de locatie is geselecteerd, drukt u op enter of de spatiebalk om het blok te verplaatsen."],"%d block added.":["%d blok toegevoegd.","%d blokken toegevoegd."],"Patterns":["Patronen"],"A tip for using the block editor":["Een tip voor het gebruik van de blok-editor"],"Browse all. This will open the main inserter panel in the editor toolbar.":["Door alles bladeren. Dit opent het hoofdvenster van de inserter in de editorwerkbalk."],"Browse all":["Door alles bladeren"],"Copied \"%s\" to clipboard.":["\"%s\" gekopieerd naar klembord."],"Moved \"%s\" to clipboard.":["Verplaatst \"%s\" naar klembord."],"Copied %d block to clipboard.":["%d blok gekopieerd naar klembord.","%d blokken naar klembord gekopieerd."],"Moved %d block to clipboard.":["verplaatst %d blok naar klembord.","%d blokken verplaatst naar klembord."],"Block %1$d of %2$d, Level %3$d":["Blok %1$d van %2$d, niveau %3$d"],"Block navigation structure":["Blok navigatiestructuur"],"Move to":["Verplaatsen naar"],"You are currently in navigation mode. Navigate blocks using the Tab key and Arrow keys. Use Left and Right Arrow keys to move between nesting levels. To exit navigation mode and edit the selected block, press Enter.":["U bevindt zich momenteel in de navigatiemodus. Navigeer door blokken met de tab-toets en de pijltoetsen. Gebruik de linker- en rechter- pijl toetsen om tussen nestniveaus te wisselen. Druk op enter om de navigatiemodus te verlaten en het geselecteerde blok te bewerken."],"Open Colors Selector":["Open kleurselector"],"Line height":["Regelafstand"],"Typography":["Typografie"],"Padding":["Opvulling"],"Change matrix alignment":["Verander de uitlijning van de matrix"],"Indent a list by pressing <kbd>space<\/kbd> at the beginning of a line.":["Laat een lijst inspringen door aan het begin van een regel op <kbd>spatie<\/kbd> te drukken."],"Outdent a list by pressing <kbd>backspace<\/kbd> at the beginning of a line.":["Geef een lijst een voorsprong door aan het begin van een regel op <kbd>backspace<\/kbd> te drukken."],"Drag files into the editor to automatically insert media blocks.":["Sleep bestanden naar de editor om automatisch mediablokken in te voegen."],"Change a block's type by pressing the block icon on the toolbar.":["Wijzig het type van een blok door op het blokpictogram op de werkbalk te drukken."],"Block %1$s is at the beginning of the content and can\u2019t be moved left":["Blok %1$s staat aan het begin van de inhoud en kan niet naar links verplaatst worden"],"Block %1$s is at the beginning of the content and can\u2019t be moved up":["Blok %1$s staat aan het begin van de inhoud en kan niet omhoog verplaatst worden"],"Block %1$s is at the end of the content and can\u2019t be moved left":["Blok %1$s staat aan het einde van de inhoud en kan niet naar links verplaatst worden"],"Block %1$s is at the end of the content and can\u2019t be moved down":["Blok %1$s staat aan het einde van de inhoud en kan niet omlaag verplaatst worden"],"Move %1$s block from position %2$d right to position %3$d":["Verplaats %1$s blok van positie %2$d naar rechts naar positie %3$d"],"Move %1$s block from position %2$d left to position %3$d":["Verplaats %1$s blok van positie %2$d naar links naar positie %3$d"],"Toggle between using the same value for all screen sizes or using a unique value per screen size.":["Schakel tussen het gebruik van dezelfde waarde voor alle schermformaten of het gebruik van een unieke waarde per schermgrootte."],"Use the same %s on all screensizes.":["Gebruik dezelfde %s voor alle schermformaten."],"Large screens":["Grote schermen"],"Small screens":["Kleine schermen"],"Medium screens":["Middelgrote schermen"],"Text labelling a interface as controlling a given layout property (eg: margin) for a given screen size.\u0004Controls the %1$s property for %2$s viewports.":["Bepaalt eigenschap %1$s voor %2$s viewports."],"Open Media Library":["Open mediabibliotheek"],"The media file has been replaced":["Het mediabestand is vervangen"],"Currently selected":["Nu geselecteerd"],"Search or type url":["Zoek of typ URL"],"Press ENTER to add this link":["Druk op ENTER om deze link toe te voegen"],"Currently selected link settings":["Huidig geselecteerde link-instellingen"],"Select a variation to start with.":["Selecteer een variatie om mee te beginnen."],"Choose variation":["Kies variatie"],"Generic label for block inserter button\u0004Add block":["Blok toevoegen"],"directly add the only allowed block\u0004Add %s":["%s toevoegen"],"%s block added":["%s blok toegevoegd"],"Multiple selected blocks":["Meerdere geselecteerde blokken"],"You are currently in edit mode. To return to the navigation mode, press Escape.":["U bevindt zich momenteel in de bewerken-modus. Druk op Escape om terug te gaan naar navigatie-modus."],"Midnight":["Middernacht"],"Electric grass":["Electrisch gras"],"Pale ocean":["Bleek oceaan"],"Luminous dusk":["Lichtgevende dageraad"],"Blush bordeaux":["Blozend bordeaux"],"Blush light purple":["Blozend lichtpaars"],"Cool to warm spectrum":["Koel naar warm spectrum"],"Very light gray to cyan bluish gray":["Zeer lichtgrijs tot cyaan blauwachtig grijs"],"Luminous vivid orange to vivid red":["Lichtgevend levendig oranje tot levendig rood"],"Block breadcrumb":["Blokkeer kruimelpad"],"Vivid cyan blue to vivid purple":["Vivid cyan blauw naar vivid paars"],"Light green cyan to vivid green cyan":["Licht groee cyan naar vivid groen cyan"],"Luminous vivid amber to luminous vivid orange":["Luminous vivid amber naar luminous vivid oranje"],"Solid":["Solid"],"Gradient":["Verloop"],"No Preview Available.":["Geen voorbeeld beschikbaar."],"Grid view":["Rasterweergave"],"List view":["Lijstweergave"],"Move left":["Verschuif naar links"],"Move right":["Verschuif naar rechts"],"Fill":["Vulling"],"Link rel":["Linkrelatie"],"Border radius":["Hoek afronding"],"Open in new tab":["Open in nieuw tabblad"],"Group":["Groeperen"],"Separate multiple classes with spaces.":["Scheid meerdere classes met spaties."],"Learn more about anchors":["Meer informatie over ankers"],"Enter a word or two \u2014 without spaces \u2014 to make a unique web address just for this block, called an \u201canchor.\u201d Then, you\u2019ll be able to link directly to this section of your page.":["Voer een of twee woorden in - zonder spaties - om een \u200b\u200buniek webadres te maken voor alleen dit blok, een zogenaamd 'anker'. Dan kunt u rechtstreeks naar dit gedeelte van uw pagina linken."],"Default Style":["Standaard stijl"],"Upload a video file, pick one from your media library, or add one with a URL.":["Upload een videobestand, selecteer er \u00e9\u00e9n vanuit uw mediabibliotheek of voeg er \u00e9\u00e9n toe met een URL."],"Upload an image file, pick one from your media library, or add one with a URL.":["Upload een afbeelding, selecteer er \u00e9\u00e9n vanuit uw mediabibliotheek of voeg er \u00e9\u00e9n toe met een URL."],"Upload an audio file, pick one from your media library, or add one with a URL.":["Upload een audiobestand, selecteer er \u00e9\u00e9n vanuit uw mediabibliotheek of voeg er \u00e9\u00e9n toe met een URL."],"Upload a media file or pick one from your media library.":["Upload een mediabestand of selecteer er \u00e9\u00e9n vanuit uw mediabibliotheek."],"Skip":["Overslaan"],"This color combination may be hard for people to read.":["Deze kleurencombinatie kan moeilijk te lezen zijn voor mensen."],"Add a block":["Een blok toevoegen"],"While writing, you can press <kbd>\/<\/kbd> to quickly insert new blocks.":["Terwijl u schrijft kunt u <kbd>\/<\/kbd> intoetsen om snel nieuwe blokken in te voegen."],"Vivid purple":["Helder paars"],"Block vertical alignment setting label\u0004Change vertical alignment":["Wijzig verticale uitlijning"],"verb\u0004Group":["Groeperen"],"Ungrouping blocks from within a grouping block back into individual blocks within the Editor \u0004Ungroup":["Groeperen opheffen"],"block style\u0004Default":["Standaard"],"Attempt Block Recovery":["Probeer blok-herstel"],"%s: Change block type or style":["%s wijzig bloktype of stijl"],"Block tools":["Blokgereedschappen"],"To edit this block, you need permission to upload media.":["Om dit blok te kunnen bewerken, moet u toestemming hebben om media te kunnen uploaden."],"%s block selected.":["%s blok geselecteerd.","%s blokken geselecteerd."],"Align text right":["Tekst rechts uitlijnen"],"Align text center":["Tekst centreren"],"Align text left":["Tekst links uitlijnen"],"Heading":["Koptekst"],"Heading %d":["Koptekst %d"],"Heading settings":["Koptekst instellingen"],"Button":["Knop"],"Document":["Document"],"%d block":["%d blok","%d blokken"],"Insert a new block before the selected block(s).":["Voeg een nieuw blok in voor de geselecteerde blok(ken)."],"Remove the selected block(s).":["Verwijder de geselecteerde blok(ken)."],"Duplicate the selected block(s).":["Kopieer de geselecteerde blok(ken)."],"Insert a new block after the selected block(s).":["Voeg een nieuw blok in na geselecteerde blok(ken)."],"Select all text when typing. Press again to select all blocks.":["Selecteer alle tekst tijdens het typen. Druk nogmaals om alle blokken te selecteren."],"Navigate to the nearest toolbar.":["Navigeer naar de dichtstbijzijnde toolbar."],"Options":["Opties"],"font size name\u0004Huge":["Zeer groot"],"font size name\u0004Large":["Groot"],"font size name\u0004Medium":["Gemiddeld"],"font size name\u0004Small":["Klein"],"Cyan bluish gray":["Cyaan blauwachtig grijs"],"Vivid cyan blue":["Levendig cyaan blauw"],"Pale cyan blue":["Bleek cyaan blauw"],"Vivid green cyan":["Levendig groen cyaan"],"Light green cyan":["Licht groen cyaan"],"Luminous vivid amber":["Lichtgevend levendig amber"],"Luminous vivid orange":["Lichtgevend levendig oranje"],"Vivid red":["Levendig rood"],"Pale pink":["Bleek roze"],"Additional CSS class(es)":["Extra CSS klasse(n)"],"Link settings":["Link instellingen"],"HTML anchor":["HTML anker"],"Skip to the selected block":["Spring naar het geselecteerde blok"],"More options":["Meer opties"],"Edit visually":["Visueel bewerken"],"Duplicate":["Dupliceer"],"Blocks cannot be moved up as they are already at the top":["Blokken kunnen niet omhoog worden verplaatst omdat ze al bovenaan staan"],"Edit as HTML":["Bewerk als HTML"],"%d result found.":["%d resultaat gevonden.","%d resultaten gevonden."],"Paste or type URL":["Plak of typ URL"],"Change type of %d block":["Wijzig type van %d blok","Wijzig type van %d blokken"],"blocks\u0004Most used":["Meest gebruikt"],"Block %1$s is at the beginning of the content and can\u2019t be moved right":["Blok %1$s staat aan het begin van de inhoud en kan niet naar rechts verplaatst worden"],"Transform to":["Transformeren naar"],"Blocks cannot be moved down as they are already at the bottom":["Blokken kunnen niet naar beneden verplaatst worden omdat ze al onderaan staan"],"This color combination may be hard for people to read. Try using a darker background color and\/or a brighter %s.":["Deze kleurencombinatie kan moeilijk leesbaar zijn voor mensen. Probeer een donkerder achtergrondkleur en\/of een helderder %s te gebruiken."],"This color combination may be hard for people to read. Try using a brighter background color and\/or a darker %s.":["Deze kleurencombinatie kan moeilijk leesbaar zijn voor mensen. Probeer een helderder achtergrondkleur en\/of een donkerder %s te gebruiken."],"Move %1$d blocks from position %2$d up by one place":["Verplaats %1$d blokken van positie %2$d \u00e9\u00e9n plaats omhoog"],"Move %1$d blocks from position %2$d right by one place":["Verplaats %1$d blokken van positie %2$d \u00e9\u00e9n plaats omlaag"],"Move %1$s block from position %2$d up to position %3$d":["Verplaats %1$s blok van positie %2$d omhoog naar positie %3$d"],"Block %1$s is at the end of the content and can\u2019t be moved right":["Blok %1$s bevindt zich aan het einde van de inhoud en kan niet naar rechts worden verplaatst"],"Block %s is the only block, and cannot be moved":["Blok %s is het enige blok en kan niet verplaatst worden"],"Convert to Blocks":["Omzetten naar blokken"],"Block: %s":["Blok: %s"],"This block has encountered an error and cannot be previewed.":["Dit blok is een fout tegengekomen en kan geen voorbeeld tonen."],"No block selected.":["Geen blok geselecteerd."],"Reset":["Herstel"],"Full width":["Volledige breedte"],"This block contains unexpected or invalid content.":["Dit blok bevat onverwachte of ongeldige inhoud."],"Resolve Block":["Oplossen blok"],"Current":["Huidig"],"After Conversion":["Na conversie"],"Convert to Classic Block":["Omzetten naar klassiek blok"],"Move %1$s block from position %2$d down to position %3$d":["Verplaats %1$s blok van positie %2$d omlaag naar positie %3$d"],"imperative verb\u0004Resolve":["Oplossen"],"font size name\u0004Normal":["Normaal"],"Convert to HTML":["Omzetten naar HTML"],"Wide width":["Wijde breedte"],"Change alignment":["Wijzig uitlijning"],"Change text alignment":["Wijzig tekstuitlijning"],"No results.":["Geen resultaten."],"%d result found, use up and down arrow keys to navigate.":["%d resultaat gevonden, gebruik de omhoog en omlaag toetsen om te navigeren.","%d resultaten gevonden, gebruik de omhoog en omlaag toetsen om te navigeren."],"Blocks":["Blokken"],"%s item":["%s item","%s items"],"Additional CSS":["Extra CSS"],"Original":["Origineel"],"Link selected.":["Link geselecteerd."],"Paste URL or type to search":["Plak URL of type om te zoeken"],"%1$s %2$s":["%1$s %2$s"],"No image selected":["Geen afbeelding geselecteerd"],"Color":["Kleur"],"List View":["Lijstweergave"],"Link CSS Class":["Link CSS-class"],"Back":["Terug"],"Auto":["Automatisch"],"Move up":["Omhoog verplaatsen"],"Move down":["Omlaag verplaatsen"],"Align right":["Rechts uitlijnen"],"Replace":["Vervangen"],"Align left":["Links uitlijnen"],"Align center":["Centreren"],"Tools":["Gereedschappen"],"Not set":["Niet ingesteld"],"Insert from URL":["Invoegen via URL"],"Video":["Video"],"Audio":["Audio"],"Columns":["Kolommen"],"Large":["Groot"],"Media Library":["Mediabibliotheek"],"Media File":["Mediabestand"],"Attachment Page":["Bijlagepagina"],"Clear selection.":["Wis selectie."],"text color":["tekstkleur"],"Mixed":["Gemengd"],"Upload":["Uploaden"],"Styles":["Stijlen"],"Link":["Link"],"Square":["Vierkant"],"User":["Gebruiker"],"Custom":["Aangepast"],"Remove link":["Link verwijderen"],"Insert link":["Link invoegen"],"Text":["Tekst"],"Next page":["Volgende pagina"],"Previous page":["Vorige pagina"],"Image":["Afbeelding"],"Source":["Bron"],"Border":["Rand"],"Dimensions":["Afmetingen"],"Top":["Bovenkant"],"Bottom":["Onderkant"],"Align":["Uitlijnen"],"Background":["Achtergrond"],"Underline":["Onderstreept"],"Strikethrough":["Doorgehaald"],"Untitled":["Naamloos"],"Unlink":["Link verwijderen"],"Paragraph":["Paragraaf"],"Font size":["Lettertype grootte"],"Type":["Type"],"Font family":["Lettertype familie"],"Copy":["Kopi\u00ebren"],"Align text":["Tekst uitlijnen"],"Insert":["Invoegen"],"Height":["Hoogte"],"Default":["Standaard"],"Width":["Breedte"],"Settings":["Instellingen"],"No results found.":["Niets gevonden."],"White":["Wit"],"Black":["Zwart"],"All":["Alles"],"Edit link":["Bewerk link"],"Search results for \"%s\"":["Zoekresultaten voor \"%s\""],"Submit":["Verzenden"],"Full Size":["Volledige grootte"],"Close":["Sluiten"],"Select":["Selecteren"],"Search":["Zoeken"],"Thumbnail":["Thumbnail"],"Left":["Links"],"Right":["Rechts"],"Medium":["Gemiddeld"],"Plugins":["Plugins"],"Cancel":["Annuleren"],"Content":["Inhoud"],"Preview":["Voorbeeld"],"Done":["Klaar"],"Save":["Opslaan"],"Advanced":["Geavanceerd"],"Publish":["Publiceren"],"URL":["URL"],"Edit":["Bewerken"],"None":["Geen"],"Apply":["Toepassen"],"Media":["Media"],"Delete":["Verwijderen"],"Scale":["Schaal"]}},"comment":{"reference":"wp-includes\/js\/dist\/block-editor.js"}} );
+</script>
+<script src="A4-folders_files/block-editor.min.js" id="wp-block-editor-js"></script>
+<script id="wp-core-data-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2023-10-14 13:34:08+0000","generator":"GlotPress\/4.0.0-alpha.11","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"Global Styles":["Globale stijlen"],"Widget types":["Widget types"],"Site":["Site"],"Comment":["Reactie"],"Menu Item":["Menu onderdeel"],"Widget areas":["Widget gebieden"],"Taxonomy":["Taxonomie"],"Post Type":["Berichttype"],"Menu Location":["Menu locatie"],"Menu":["Menu"],"User":["Gebruiker"],"Base":["Basis"],"Widgets":["Widgets"],"Site Title":["Sitetitel"],"Themes":["Thema's"],"(no title)":["(geen titel)"],"Plugins":["Plugins"],"Media":["Media"]}},"comment":{"reference":"wp-includes\/js\/dist\/core-data.js"}} );
+</script>
+<script src="A4-folders_files/core-data.min.js" id="wp-core-data-js"></script>
+<script src="A4-folders_files/script.js" id="wpzoom-forms-js-frontend-formblock-js"></script>
+<script src="A4-folders_files/index.js" id="swv-js"></script>
+<script id="contact-form-7-js-extra">
+var wpcf7 = {"api":{"root":"https:\/\/https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html\/wp-json\/","namespace":"contact-form-7\/v1"}};
+</script>
+<script src="A4-folders_files/index_002.js" id="contact-form-7-js"></script>
+<script id="codedropz-uploader-js-extra">
+var dnd_cf7_uploader = {"ajax_url":"https:\/\/https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html\/wp-admin\/admin-ajax.php","ajax_nonce":"e24edd8995","drag_n_drop_upload":{"tag":"h3","text":"Drag & Drop Files Here","or_separator":"or","browse":"Browse Files","server_max_error":"The uploaded file exceeds the maximum upload size of your server.","large_file":"Uploaded file is too large","inavalid_type":"Uploaded file is not allowed for file type","max_file_limit":"Note : Some of the files are not uploaded ( Only %count% files allowed )","required":"This field is required.","delete":{"text":"deleting","title":"Remove"}},"dnd_text_counter":"of","disable_btn":""};
+</script>
+<script src="A4-folders_files/codedropz-uploader-min.js" id="codedropz-uploader-js"></script>
+<script src="A4-folders_files/plugins.min.js" id="inspiro-lite-js-plugins-js"></script>
+<script src="A4-folders_files/scripts.min.js" id="inspiro-lite-script-js"></script>
+<script src="A4-folders_files/social-icons-widget-frontend.js" id="zoom-social-icons-widget-frontend-js"></script>
+<script id="cmplz-cookiebanner-js-extra">
+var complianz = {"prefix":"cmplz_","user_banner_id":"1","set_cookies":[],"block_ajax_content":"","banner_version":"34","version":"6.5.5","store_consent":"","do_not_track_enabled":"1","consenttype":"optin","region":"eu","geoip":"","dismiss_timeout":"","disable_cookiebanner":"","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https:\/\/https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html\/wp-json\/complianz\/v1\/","locale":"lang=nl&locale=nl_NL_formal","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"16","cookie_path":"\/","categories":{"statistics":"statistieken","marketing":"marketing"},"tcf_active":"","placeholdertext":"Klik om {category} cookies te accepteren en deze inhoud in te schakelen","aria_label":"Klik om {category} cookies te accepteren en deze inhoud in te schakelen","css_file":"https:\/\/https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html\/wp-content\/uploads\/complianz\/css\/banner-{banner_id}-{type}.css?v=34","page_links":{"eu":{"cookie-statement":{"title":"Cookiebeleid","url":"https:\/\/https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html\/cookie-policy-eu\/"},"privacy-statement":{"title":"Privacybeleid","url":"https:\/\/https://timigi.com/LOI/BPV/KALIBER%20MEDIA/CULTUREELDRUKWERK/index.html\/privacybeleid\/"}}},"tm_categories":"","forceEnableStats":"","preview":"","clean_cookies":""};
+</script>
+<script defer="defer" src="A4-folders_files/complianz.min.js" id="cmplz-cookiebanner-js"></script>
+<script id="cmplz-cookiebanner-js-after">
+		
+			function ensure_complianz_is_loaded() {
+				let timeout = 30000000; // 30 seconds
+				let start = Date.now();
+				return new Promise(wait_for_complianz);
+
+				function wait_for_complianz(resolve, reject) {
+					if (window.cmplz_get_cookie) // if complianz is loaded, resolve the promise
+						resolve(window.cmplz_get_cookie);
+					else if (timeout && (Date.now() - start) >= timeout)
+						reject(new Error("timeout"));
+					else
+						setTimeout(wait_for_complianz.bind(this, resolve, reject), 30);
+				}
+			}
+
+			// This runs the promise code
+			ensure_complianz_is_loaded().then(function(){
+
+							  		// cookieless tracking is disabled
+					document.addEventListener("cmplz_cookie_warning_loaded", function(consentData) {
+						let region = consentData.detail;
+						if (region !== 'uk') {
+							let scriptElements = document.querySelectorAll('script[data-service="burst"]');
+							scriptElements.forEach(obj => {
+								if (obj.classList.contains('cmplz-activated') || obj.getAttribute('type') === 'text/javascript') {
+									return;
+								}
+								obj.classList.add('cmplz-activated');
+								let src = obj.getAttribute('src');
+								if (src) {
+									obj.setAttribute('type', 'text/javascript');
+									cmplz_run_script(src, 'statistics', 'src');
+									obj.parentNode.removeChild(obj);
+								}
+							});
+						}
+					});
+					document.addEventListener("cmplz_run_after_all_scripts", cmplz_burst_fire_domContentLoadedEvent);
+
+					function cmplz_burst_fire_domContentLoadedEvent() {
+						let event = new CustomEvent('burst_fire_hit');
+						document.dispatchEvent(event);
+					}
+							});
+		
+		
+</script>
+<!-- start Simple Custom CSS and JS -->
+<!-- Add HTML code to the header or the footer.
+
+For example, you can use the following code for loading the jQuery library from Google CDN:
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+or the following one for loading the Bootstrap library from jsDelivr:
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+-- End of the comment --> 
+
+<div class="customFooter">
+	<div>
+		<div style="margin-right:1%;"><h2 class="customFooterHeader">CULTUREEL DRUKWERK</h2></div>
+		Kloosterweg 1 | 6412 CN Heerlen | Tel: 045 – 205 2182
+	</div>
+	<div style="margin-left:1%;">
+		<h2 class="customFooterHeader">&nbsp;</h2>
+		© 2023 Cultureel Drukwerk - Alle rechten voorbehouden
+	</div>
+</div><!-- end Simple Custom CSS and JS -->
+
+
+
+<p id="a11y-speak-intro-text" class="a11y-speak-intro-text" style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;" hidden="hidden">Berichten</p><div id="a11y-speak-assertive" class="a11y-speak-region" style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div><div id="a11y-speak-polite" class="a11y-speak-region" style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;" aria-live="polite" aria-relevant="additions text" aria-atomic="true"></div></body></html>
