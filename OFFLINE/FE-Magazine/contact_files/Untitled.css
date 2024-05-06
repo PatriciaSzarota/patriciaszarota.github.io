@@ -1,0 +1,173 @@
+.wp-block-post-title {
+font-size:2.4rem;
+display: none;
+}
+.woocommerce-cart .button.wc-backward, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+    color: #FFFFFF;
+}
+.annoyingbutton{
+color:#FFFFFF;
+}
+.woocommerce-products-header__title{
+font-size:2.4rem;
+display: none;
+}
+.page-title {
+font-size:2.4rem;
+display: none;
+}
+.wp-block-button{
+  font-size: 1vw;
+}
+.footertext{
+  font-size:0.8vw;
+}
+
+.leftandrightjustify{
+  text-align: justify;
+  text-align-last: left;
+  word-spacing:-2px;
+}
+.contactform{
+  background-color:#b94a95;
+  padding:1%;
+  padding-left:5%;
+  margin-top:0px;
+  box-shadow: -15px 15px 5px rgba(0, 0, 0, 0.2);
+}
+.boxshadow{
+    box-shadow: -15px 15px 30px rgba(0, 0, 0, 0.5);
+}
+.aanvraagform{
+  background-color:#b94a95;
+  padding:1%;
+  padding-left:2%;
+  padding-right:3%;
+  margin-top:0px;
+  box-shadow: -15px 15px 5px rgba(0, 0, 0, 0.2);
+}
+.aanvraagform input{
+  padding:2%;
+}
+.aanvraagform input[type=button], input[type=submit], input[type=reset] {
+  padding:5%;
+  font-size:18pt;
+  margin:auto;
+  text-align:center;
+}
+.video-container {
+  background-color:#000000;
+  max-height:100%;
+  margin-bottom:0px;
+}
+
+a.navbutton:link {
+  color:#FFFFFF;
+}
+a.navbutton:hover {
+  color:#FFFFFF;
+}
+a.navbutton:active {
+  color:#f2ab2c;
+}
+a.navbutton:visited {
+  color:#FFFFFF;
+}
+.navbutton{
+    font-size:0.75vw;
+}
+
+.footerbg {
+  background-color:#FFFFFF;
+}
+
+
+@media only screen and (max-width:2000px) {
+  .navbutton{
+  font-size:0.9vw;
+}
+}
+
+@media only screen and (max-width:1500px) {
+  .navbutton{
+  font-size:1vw;
+}
+}
+
+@media only screen and (max-width:1000px) {
+  .footertext p
+  {
+  font-size:12pt;
+  }
+  .standardbutton{
+  font-size:12pt;
+  }
+  .navbutton {
+  font-size:1.5vw;
+}
+}
+@media only screen and (max-width: 480px) {
+  .footertext p
+  {
+  font-size:6pt;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .FrontVideoBlock{
+  margin-left:15%;margin-right:15%;  
+  }
+}
+
+.navbutton-back {
+  background-color:#b94a95;
+  padding-top:0.5%;padding-bottom:0.5%;
+  border-top:2px solid #000000;
+  border-bottom:2px solid #000000;
+}
+
+.navbutton-backHEAD {
+  background-color:#b94a95;
+  padding-top:0.5%;padding-bottom:0.5%;
+  border-top:2px solid #000000;
+  border-bottom:2px solid #000000;
+}
+
+.newsbar {
+  background-color:#b94a95;
+  padding-bottom:0.5%;
+  padding-top:0.5%;
+  border-bottom:2px solid #000000;
+}
+
+@media (orientation: portrait){
+  input{
+ max-width:90%; 
+}
+.wpcf7-textarea{
+  max-width:90%;
+}
+}
+
+@media (orientation: portrait) and (max-width: 600px) {
+.navbutton{
+  font-size: 12pt;
+}
+}
+
+.outline {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.boxshadowtight {
+  box-shadow: -15px 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+.videocontainer{
+border-bottom:5px solid #b94a95;
+}
+
+.add_to_cart_button{
+color:#FFFFFF; 
+}
+.single_add_to_cart_button{
+color:#FFFFFF;
+}

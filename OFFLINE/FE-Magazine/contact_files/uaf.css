@@ -1,0 +1,13 @@
+				@font-face {
+					font-family: 'galvji';
+					src: url('/wp-content/uploads/useanyfont/5651Galvji.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/5651Galvji.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.galvji{font-family: 'galvji' !important;}
+
+						body{
+					font-family: 'galvji' !important;
+				}
+		
