@@ -8,6 +8,7 @@ body{
 		margin:0px;
 		padding:0px;
 		font-family:Arial;
+		overflow-x:hidden;
 }
 
 .socials{
@@ -47,19 +48,18 @@ h2.whoAmI{
 	margin-bottom:0px;
 /*	background-color:#FF0000; */
 	text-align:center;
-	width:120%;
 	image-rendering: auto;
+	position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;
 }
 
-img.profile{
-	max-width:125%;
-	max-height:125%;
-/*	border:2px solid #000000;
-	border-radius:100%; */
-	text-align:center;
-	margin-bottom:-3.5px;
-
-	margin-left:-300px;
+.profileImg{
+	flex-shrink:0;
+	max-width:100%;
+	max-height:100%;
 }
 
 @keyframes bloop-in {
@@ -334,6 +334,7 @@ img.profile{
 	justify-content:space-evenly;
 	flex-wrap:nowrap;
 	align-items:flex-end;
+	z-index:10;
 /*	background-color:#FF0000; */
 }
 .heroTopWrapper-BOT{
@@ -344,11 +345,13 @@ img.profile{
 		font-size:3rem;
 		font-family:Alpha Centauri;
 		text-decoration:underline;
+		margin-top:20%;
 }
 
 .heroTopText {
 		width:40vw;
 		font-size:1.1rem;
+		z-index: 10;
 }
 
 .flexBlankWide {
@@ -732,48 +735,29 @@ button.buttonCustom:active:after {
 	.showcaseTitlebarHeaderBLU {
 			font-size:7vw;
 	}
-	img.profile{
-		margin-left:-15%;
-		width:1000vw;
-		height:35vh;
-	}
+
 }
 
 /* For Mobile */
 @media screen and (min-width: 880px) and (max-width: 1030px) {
-	.profile{
-		width:100%;
-	}
 	.heroTopContainerPROFILE{
 		margin-top:11vh;
 	}
 	.heroTopText{
 		padding-bottom:0%;
 	}
-	img.profile{
-		margin-left:-15%;
-		width:1000vw;
-		height:50vh;
-	}
 }
 
 /* For Between */
 @media screen and (min-width: 1030px) and (max-width: 1200px) {
-	img.profile{
-		margin-top:20vh;
-		margin-left:-15%;
-	}
 	.heroTopText{
 		padding-bottom:5%;
+		right:-255px;
 	}
 }
 
 /* For Tablets */
 @media screen and (min-width: 1200px) {
-	img.profile{
-		margin-top:12vh;
-		margin-left:-20%;
-	}
 	.heroTopText{
 		padding-bottom:20%;
 	}
