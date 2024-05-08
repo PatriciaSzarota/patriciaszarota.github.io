@@ -663,6 +663,50 @@ img.interstitialImage{
 
 /* BUTTON ANIMATION */
 
+/* CTA BUTTON */
+.buttonCTA{
+	border: 2px solid #000;
+    border-radius: 20px;
+    padding: 5px 20px;
+    background: #60B660;
+	color:#FFF;
+	font-size:2rem;
+    position: relative;
+    overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+.buttonCTA:hover {
+	background: #B8EDB8;
+	transform:scale(1.5);
+}
+.buttonCTA:active {
+	background: #277627;
+	transform:scale(1);
+}
+.buttonCTA:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear; /* Animation */
+}
+
+@keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+
+/* WEBSITE BUTTON */
+
 button.buttonCustom {
   border-radius: 4px;
   background-color: #FFB660;
@@ -681,7 +725,7 @@ button.buttonCustom {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  transition: 0.5s;
+/*  transition: 0.5s; */
 }
 
 button.buttonCustom:after {
