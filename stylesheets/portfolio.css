@@ -442,11 +442,18 @@ h2.whoAmI{
 		margin:auto;
 		text-align:center;
 }
-
+.showcaseImageTRANSPARENT {
+		margin:auto;
+		text-align:center;
+}
 img.showcaseImage {
 	max-width:100%;
 	border-radius:20px;
 	border:1px solid black;
+}
+img.showcaseImageTRANSPARENT {
+	max-width:100%;
+	margin-bottom:5%;
 }
 
 .showcaseImageText {
