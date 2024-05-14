@@ -21,6 +21,34 @@ body{
 	align-items:center;
 }
 
+.interstitialFlexWRAPPER_TWO{
+	background-color:#DEFFCF;
+	border-radius:20px;
+	margin:auto;
+	text-align:center;
+	width:50%;
+	max-width:500px;
+}
+.interstitialFlexTWO{
+	display:flex;
+	justify-content:space-evenly;
+	overflow:hidden;
+	flex-wrap:wrap;
+	width:100%;
+	flex-direction:row;
+	align-items:center;
+}
+.interstitialTextTWO{
+	font-size:2rem
+}
+.interstitialImageTWO{
+	font-size:1.5rem;
+}
+img.interstitialImageTWO{
+	width:70px;
+	height:68px;
+}
+
 img.socials{
 	max-width:100px;
 }
@@ -156,41 +184,41 @@ h2.whoAmI{
 }
 
 .bloop-in1 {
-    animation: bloop-in 2s forwards;
 	-webkit-animation: bloop-in 2s forwards;
 	-moz-animation: bloop-in 2s forwards;
 	-o-animation: bloop-in 2s forwards;
 	-ms-animation: bloop-in 2s forwards;
+    animation: bloop-in 2s forwards;
   }
 
 .bloop-in2 {
-    animation: bloop-in2 3s forwards;
 	-webkit-animation: bloop-in2 3s forwards;
 	-moz-animation: bloop-in2 3s forwards;
 	-o-animation: bloop-in2 3s forwards;
 	-ms-animation: bloop-in2 3s forwards;
+    animation: bloop-in2 3s forwards;
   }
 
 .bloop-in3 {
-    animation: bloop-in3 3.2s forwards;
 	-webkit-animation: bloop-in3 3.2s forwards;
 	-moz-animation: bloop-in3 3.2s forwards;
 	-o-animation: bloop-in3 3.2s forwards;
 	-ms-animation: bloop-in3 3.2s forwards;
+    animation: bloop-in3 3.2s forwards;
   }
 
 .to-fade-in {
-    animation: fade-out 1ms forwards;
 	-webkit-animation: fade-out 1ms forwards;
 	-moz-animation: fade-out 1ms forwards;
 	-o-animation: fade-out 1ms forwards;
 	-ms-animation: fade-out 1ms forwards;
+    animation: fade-out 1ms forwards;
   &.fade-in {
-    animation: fade-in 3s forwards;
 	-webkit-animation: fade-in 3s forwards;
 	-moz-animation: fade-in 3s forwards;
 	-o-animation: fade-in 3s forwards;
 	-ms-animation: fade-in 3s forwards;
+    animation: fade-in 3s forwards;
   }
 }
 
@@ -370,6 +398,12 @@ h2.whoAmI{
 	width:80%;
 	margin:auto;
 }
+.horizontal_ruleFULL {
+	border:6px solid #60B660;
+	border-radius:20px;
+	width:100%;
+	margin:auto;
+}
 
 .corporateShapes{
 	position:absolute;
@@ -417,7 +451,7 @@ img.showcaseImage {
 
 .showcaseImageText {
 		padding:2%;
-		width:100%;
+		width:50%;
 }
 
 .showcaseVideoContainer {
@@ -584,11 +618,11 @@ img.interstitialImage{
   min-width: 160px;
   box-shadow: 8px 16px 8px rgba(0,0,0,0.35);
   z-index: 1;
-  animation: growDown 600ms ease-in-out forwards;
   -webkit-animation: growDown 600ms ease-in-out forwards;
   -moz-animation: growDown 600ms ease-in-out forwards;
   -o-animation: growDown 600ms ease-in-out forwards;
   -ms-animation: growDown 600ms ease-in-out forwards;
+  animation: growDown 600ms ease-in-out forwards;
   transform-origin: top center;
   border-radius:0px 0px 20px 20px;
 }
@@ -696,6 +730,10 @@ img.interstitialImage{
     );
     top: 0;
     left: -100px;
+    -webkit-animation: shine 3s infinite linear; /* Animation */
+    -moz-animation: shine 3s infinite linear; /* Animation */
+    -ms-animation: shine 3s infinite linear; /* Animation */
+    -o-animation: shine 3s infinite linear; /* Animation */
     animation: shine 3s infinite linear; /* Animation */
 }
 
@@ -774,10 +812,20 @@ button.buttonCustom:active:after {
 		font-size:5vw;
 	}
 	.showcaseTitlebarHeader {
-			font-size:7vw;
+			font-size:6vw;
 	}
 	.showcaseTitlebarHeaderBLU {
 			font-size:7vw;
+	}
+	.interstitialTextTWO{
+		font-size:1rem;
+	}
+	.interstitialImageTWO{
+	font-size:0.6rem;
+	}
+	img.interstitialImageTWO{
+	width:50px;
+	height:50px;
 	}
 
 }
@@ -789,6 +837,12 @@ button.buttonCustom:active:after {
 	}
 	.heroTopText{
 		padding-bottom:0%;
+	}
+	.interstitialTextTWO{
+		font-size:1.5rem;
+	}
+	.interstitialImageTWO{
+	font-size:1.25rem;
 	}
 }
 
