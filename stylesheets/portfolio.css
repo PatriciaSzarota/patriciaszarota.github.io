@@ -442,6 +442,11 @@ h2.whoAmI{
 		margin:auto;
 		text-align:center;
 }
+.showcaseImageCARTOON {
+	background-color:#FFAC96;
+	margin:auto;
+	text-align:center;
+}
 .showcaseImageTRANSPARENT {
 		margin:auto;
 		text-align:center;
@@ -450,6 +455,12 @@ img.showcaseImage {
 	max-width:100%;
 	border-radius:20px;
 	border:1px solid black;
+}
+img.showcaseImageCARTOON {
+	border-radius:20px;
+	padding:2%;
+	border:1px solid black;
+	height:20vw;
 }
 img.showcaseImageTRANSPARENT {
 	max-width:100%;
