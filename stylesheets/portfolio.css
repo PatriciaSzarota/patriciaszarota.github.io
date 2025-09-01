@@ -501,9 +501,11 @@ img.showcaseImageTRANSPARENT {
 		width:50%;
 		min-width:250px;
 		font-family:Alpha Centauri;
+		z-index:1;
 }
 .showcaseTitlebarHeader2 {
 		background-color:#60B660;
+		z-index:1;
 }
 
 .showcaseTitlebarSubtitle{
@@ -903,3 +905,4 @@ button.buttonCustom:active:after {
 
 
 /* ff8969 */
+
